@@ -1,0 +1,52 @@
+  ﻿
+.msl_eventlist .msl_event1 { margin: 0; padding: 0.5em; }
+.msl_eventlist .msl_event1 dt { font-weight: bold; margin-bottom: 0.3em; font-size: 110%; }
+.msl_eventlist .msl_event1 dt a { display: block; width: 100%; overflow: hidden; }
+.msl_eventlist .msl_event1 dd {margin: 0; padding: 0; }
+.msl_eventlist .msl_event1 .msl_event_image { display: block; text-align: center; }
+.msl_eventlist .msl_event1 .msl_event_image img { margin: 0 auto; }
+.msl_eventlist .msl_event1 dd.msl_event_time { font-size: 85%; font-style: italic; display: inline; }
+.msl_eventlist .msl_event1 dd.msl_event_location { font-size: 85%; font-style: italic; display: inline; }
+.msl_eventlist .msl_event1 dd.msl_event_description { text-align: justify; }
+.msl_eventlist .msl_event1 dd.msl_event_tickets {}
+.msl_eventlist .msl_event1 dd.msl_event_tickets ul { list-style-type: none; margin: 0; padding: 0; clear: both; }
+.msl_eventlist .msl_event1 dd.msl_event_edit {}
+.msl_eventlist .msl_event1 dd.msl_event_types {}
+.msl_eventlist .msl_event1 dd.msl_event_tickets a {}
+.msl_eventlist .msl_event1 dd.msl_event_types a { font-size: 85%; color: #666; text-decoration: none; }
+.msl_eventlist .msl_event1 dd.msl_event_types a:hover { color: #c00; }
+
+.msl_eventlist .msl_event2 { margin: 0; padding: 0.25em 0.5em; }
+.msl_eventlist .msl_event2 dt { font-weight: bold; margin-bottom: 0.3em; }
+.msl_eventlist .msl_event2 dt a { display: block; width: 100%; overflow: hidden; }
+.msl_eventlist .msl_event2 dd {margin: 0; padding: 0; }
+.msl_eventlist .msl_event2 .msl_event_image { display: none; }
+.msl_eventlist .msl_event2 dd.msl_event_time { font-size: 85%; font-weight: normal; font-size: 85%; font-style: italic; }
+.msl_eventlist .msl_event2 dd.msl_event_location { display: none; }
+.msl_eventlist .msl_event2 dd.msl_event_description { display: none; }
+.msl_eventlist .msl_event2 dd.msl_event_tickets { display: none; }
+.msl_eventlist .msl_event2 dd.msl_event_tickets ul {}
+.msl_eventlist .msl_event2 dd.msl_event_edit { display: none; }
+.msl_eventlist .msl_event2 dd.msl_event_types { display: none; }
+.msl_eventlist .msl_event2 dd.msl_event_tickets a {}
+.msl_eventlist .msl_event2 dd.msl_event_types a {}
+.msl_eventlist .msl_event2 dd.msl_event_types a:hover { color: #c00; }
+.msl_eventlist .msl_event2 dd.msl_event_online { display: none; }
+
+.msl_eventlist .msl_event3 { margin: 0; padding: 0.5em; }
+.msl_eventlist .msl_event3 dt { font-weight: bold; margin-bottom: 0.3em; font-size: 110%; display: block; }
+.msl_eventlist .msl_event3 dt a {  }
+.msl_eventlist .msl_event3 dd {margin: 0 0 0 105px; padding: 0; zoom: 1; /* Trigger hasLayout see http://www.cayenne.co.uk/ie7/disappearing-content.html */ }
+.msl_eventlist .msl_event3 .msl_event_image img { margin: 0 auto; }
+.msl_eventlist .msl_event3 .msl_event_image {  display: block; float: left;  width: 100px; margin: 0 5px 5px 0; _height: 80px; text-align: center;  }
+.msl_eventlist .msl_event3 dd.msl_event_time { font-size: 85%; font-style: italic; display: inline; margin: 0;  }
+.msl_eventlist .msl_event3 dd.msl_event_location { font-size: 85%; font-style: italic; display: inline; margin: 0; }
+.msl_eventlist .msl_event3 dd.msl_event_description { text-align: justify; }
+.msl_eventlist .msl_event3 dd.msl_event_tickets {}
+.msl_eventlist .msl_event3 dd.msl_event_tickets ul { list-style-type: none; margin: 0; padding: 0; clear: both; }
+.msl_eventlist .msl_event3 dd.msl_event_edit {}
+.msl_eventlist .msl_event3 dd.msl_event_types {}
+.msl_eventlist .msl_event3 dd.msl_event_tickets a {}
+.msl_eventlist .msl_event3 dd.msl_event_types a { font-size: 85%; color: #666; text-decoration: none; }
+.msl_eventlist .msl_event3 dd.msl_event_types a:hover { color: #c00; }
+.msl_eventlist .msl_event3 dd.msl_event_hook { clear: both; }

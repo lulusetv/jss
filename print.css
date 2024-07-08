@@ -1,0 +1,17 @@
+  ﻿
+#tb { display: none; }	
+#page_container , #container { float: none; width: 100% !important; }
+#header{ display: none;}
+#wrapper{ margin: 0; }
+#content{ margin: 0; width: 100%;}
+#navigation{ display: none; }
+#sidebar{ display: none; }
+#footer{ 
+	display: none;
+	}
+#banner_advert {
+	display: none;
+}
+#breadcrumb {
+	display: none;
+}

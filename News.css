@@ -1,0 +1,151 @@
+  ﻿
+
+.newslayout1 {}
+.newslayout1 .news_item { width: 49.5%; float: left; overflow: hidden; }
+.newslayout1 .item1 { width: 100%; overflow: hidden; }
+.newslayout1 .item1 h5 { font-size: 140%; margin-bottom: 0.25em; }
+.newslayout1 .item1 .news_image { width: 200px; float: left; margin: 0 0.5em 0.5em 0; }
+.newslayout1 .item1 .news_image img { width:200px; height:160px; }
+
+.newslayout1 .item4,
+.newslayout1 .item6,
+.newslayout1 .item8,
+.newslayout1 .item10,
+.newslayout1 .item12 { 
+	clear: left; 
+	}
+
+
+.newslayout2 {}
+.newslayout2 .news_image { display: block; }
+
+
+/*===============================================
+
+	News Item Layouts 
+
+===============================================*/
+
+.news1 .news_item_inner { padding: 0.5em; }
+.news1 .news_item_hook { }
+.news1 h5 {margin-left: 105px; }
+.news1 h5 a { }
+.news1 .news_image { width: 100px; float: left; margin: -1.7em 5px 5px 0; }
+.news1 .news_image a {}
+.news1 .news_image img { width:100px; height:80px; }
+.news1 .leader { margin-left: 105px; }
+.news1 .news_all {}
+
+.news2 .news_item_inner { padding: 0.25em; overflow: hidden; }
+.news2 .news_item_hook { }
+.news2 h5 { font-weight: bold; font-size: 100%; margin: 0 0 0.25em 0; }
+.news2 h5 a {}
+.news2 .news_image { width: 100px; float: left;  margin: 0 0.25em 0.25em 0; }
+.news2 .news_image a {}
+.news2 .news_image img { width:100px; height:80px; }
+.news2 .leader { }
+.news2 .news_all {}
+
+.news3 .news_item_inner { padding: 0.5em; }
+.news3 .news_item_hook { }
+.news3 h5 { font-weight: bold; margin: 0 0 0.5em 0; }
+.news3 h5 a {}
+.news3 .news_image { width: 100px; display: block; }
+.news3 .news_image a {}
+.news3 .news_image img { width:100px; height:80px; }
+.news3 .leader { }
+.news3 .news_all {}
+
+.news4 .news_item_inner { zoom: 1; /* hasLayout required */ clear: both; padding: 0.5em; position: relative; }
+.news4 .news_item_hook { height: 41px; width: 55px; float: left; }
+.news4 h5 { font-size: 90%; font-weight: bold; padding: 0; margin: 0; height: 50px; }
+.news4 h5 a {}
+.news4 .news_image { }
+.news4 .news_image a {}
+.news4 .news_image img { width: 50px; height: 40px; position: absolute; top: 5px; left: 10px; }
+.news4 .leader { display: none; }
+.news4 .news_all {}
+
+
+/* Homepage layout that has 4 primary items, the rest as just links */
+.newslayout_home {}
+.newslayout_home .news_item { width: 49.5%; float: left; overflow: hidden; }
+
+.newslayout_home .item3 ,
+.newslayout_home .item5 { 
+	clear: left; 
+	}
+
+.news_home .news_item {
+min-height: 2.4em;
+}
+.news_home .news_item_inner { }
+.news_home .news_item_hook { }
+.news_home h5 { }
+.news_home h5 a { }
+.news_home .news_image { display:none; }
+.news_home .news_image a {}
+.news_home .news_image img { width:100px; height:80px; }
+.news_home .leader { display:none; }
+.news_home .news_all { margin-top: 1em;}
+
+.newslayout_home .item1 .leader ,
+.newslayout_home .item2 .leader ,
+.newslayout_home .item3 .leader ,
+.newslayout_home .item4 .leader {
+margin-left: 105px;
+display: block;
+}
+.newslayout_home .item1 .news_image ,
+.newslayout_home .item2 .news_image ,
+.newslayout_home .item3 .news_image ,
+.newslayout_home .item4 .news_image {
+width: 100px; float: left;
+display: block;
+}
+
+
+
+
+/* Full width Homepage layout that has 3 primary items, the rest as just links */
+.news_home2 .news_item {}
+.news_home2 .news_item_inner { }
+.news_home2 .news_item_hook { }
+.news_home2 h5 { }
+.news_home2 h5 a { }
+.news_home2 .news_image { display:none; }
+.news_home2 .news_image a {}
+.news_home2 .news_image img { width:100px; height:80px; }
+.news_home2 .leader { display:none; }
+.news_home2 .news_all { margin-top: 1em;}
+
+.newslayout_home2 .item1 h5 ,
+.newslayout_home2 .item2 h5 ,
+.newslayout_home2 .item3 h5 {
+margin-left: 105px;
+display: block;
+}
+.newslayout_home2 .item1 .leader ,
+.newslayout_home2 .item2 .leader ,
+.newslayout_home2 .item3 .leader {
+margin-left: 105px;
+display: block;
+}
+.newslayout_home2 .item1 .news_image ,
+.newslayout_home2 .item2 .news_image ,
+.newslayout_home2 .item3 .news_image  {
+width: 100px; float: left; margin: -1.7em 5px 5px 0;
+display: block;
+}
+
+/* Tag list defaults */
+.news_item .tag-list span {
+background: url(/skins/images/icons/16/news-tag.png) no-repeat scroll left 50% transparent;
+border-radius: 0 3px 3px 0;
+color: #FFFFFF;
+display: inline-block;
+font-size: 11px;
+font-weight: bold;
+line-height: 1;
+padding: 3px 4px 3px 11px;
+}

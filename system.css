@@ -1,0 +1,1866 @@
+  ﻿#docmsl {
+	text-align:left;
+	width:auto;
+	margin: 0.5em; 
+	min-width: 0; 
+	}
+
+/* Many reset css lists remove these, re-override in custom css if required */
+b,strong { font-weight: bold; }
+i,em { font-style: italic; }
+
+.killfloat {
+	clear: both;
+	line-height: 0;
+	height: 0;
+	margin: 0;
+	font-size: 0;
+}
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+/* End hide from IE-mac */
+
+
+/* re-reset margins and list styles for user added content */
+.text_region ul { 
+	list-style-type: disc;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+.text_region li {
+	margin: 0.1em 1em;
+}
+.text_region h1,
+.text_region h2,
+.text_region h3,
+.text_region h4,
+.text_region h5,
+.text_region h6 {
+	margin: 0.4em 0;
+}
+
+
+/*==========================================
+
+	ASP.NET AJAX
+
+==========================================*/
+.modalBackground
+{
+	background: #333;
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	opacity: 0.7;
+	
+}
+
+.CatchEnter { display: none; }
+
+/* Autocomplete lists - select grouping, product etc */
+
+.autocomplete-list {
+	z-index: 10003 !important;
+	list-style: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.autocomplete_item {
+	border-top: 1px solid #ccc;
+	padding: 5px;
+	font-size: 85%;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.autocomplete_item_highlight {
+	background-color: #333;
+	color: #fff;
+	border-top: 1px solid #ccc;	
+	padding: 5px;
+	font-size: 85%;
+	overflow: hidden;
+}
+
+/*==========================================
+
+	Form elements 
+
+==========================================*/
+input.button {
+	margin: 0;
+	padding: 0;
+	border: 1px solid #999;
+	background: #fcfdfe url(images/interface/button.gif) repeat-x 0 0;
+	color: #333;
+	font-size: 85%;
+	font-weight: bold;
+	}
+input.disabled {
+	color: #aaa;
+	}
+input.textbox {
+	margin: 0;
+	padding: 2px 3px;
+	border: 1px solid #999;
+	font-size: 85%;
+	}
+input.textbox:hover {
+	border-color:  #666;
+	background-color: #fcfcff;
+	}
+input.textbox:focus {
+	border-color: #666;
+	background-color: #f3f3ff;
+	}
+textarea.textbox {
+	margin: 0;
+	padding: 2px 3px;
+	border: 1px solid #999;
+	font-size: 85%;
+}
+
+.error {
+	display: block;
+	margin: 0.2em;
+	padding: 2px 2px 2px 28px;
+	color: #c00;
+	background: #ffc url(images/interface/error.gif) no-repeat 4px 4px;
+	border: 1px solid #c60;
+	border-width: 2px 0;
+}
+.error h1,
+.error h2,
+.error h3,
+.error h4,
+.error h5,
+.error h6,
+.error a {
+	color: #c00;
+	margin: 0;
+}
+.confirm {
+	display: block;
+	margin: 0.2em;
+	padding: 2px 2px 2px 24px;
+	color: #060;
+	background: #cfc url(images/interface/confirm.gif) no-repeat 4px 4px;
+	border: 1px solid #030;
+}
+.input_error {
+	color: #c00;
+	background: #FFEBEB;
+	border: 1px solid #EBAFAF;
+	}
+.error_inline {
+	display: inline-block;
+	margin: 0.2em;
+	padding: 2px 2px 2px 24px;
+	color: #c00 !important;
+	background: transparent url(images/interface/error.gif) no-repeat 4px 4px;
+}
+.required {
+	color: #c00;
+	}
+.form_hint {
+	display: block;
+	clear: both;
+	color: #966;
+	font-size: 80%;
+	margin: 0;
+}	
+
+.chkLabel {
+	display: inline;
+	font-weight: normal;
+}
+input.datebox {
+	width: 6em;
+}
+
+/* MSL Notification control wrapper style 
+    - used in conjunction with error/warning/information styles below */
+.msl_notification 
+{
+    background-color: #ffc ;
+    border: none;
+    margin:1em 0 1em 0;
+    padding:0.2em;
+    font-weight:bold;
+}
+.msl_warning {
+    display: block;
+    clear: both;
+    margin: 0.2em;
+    padding: 2px 2px 2px 28px;
+    background: url(/skins/images/interface/warning.png) no-repeat 4px 4px;
+    border: 1px solid #c60;
+    border-width: 2px 0;
+}
+.msl_info {
+    display: block;
+    clear: both;
+    margin: 0.2em;
+    padding: 2px 2px 2px 28px;
+    background: url(/skins/images/interface/information.png) no-repeat 4px 4px;
+    border: none;
+    border-width: 2px 0;
+}
+.msl_error {
+    display: block;
+    clear: both;
+    margin: 0.2em;
+    padding: 2px 2px 2px 28px;
+    background: url(/skins/images/interface/forbidden.png) no-repeat 4px 4px;
+    border: none;
+    border-width: 2px 0;
+}
+/* When info appears as a table header icon */
+th.control .msl_info {
+    padding: 0;
+    width: 16px;
+    margin: 0 auto;
+    border: none;
+    background-position: 50% 50%;
+}
+
+.msl_sitemsg {
+    display: block;
+	margin: 0em;
+	padding: 8px;
+	font-size:1.5em;
+	background-color:#dfdfdf;
+	text-align: center;
+	border: none;
+	border-width: 2px 0;
+}
+
+.msl-vol-opportunity-apply .msl_notification {margin:0;}
+
+/*==========================================
+
+	Data tables / Editing Grids
+
+==========================================*/
+
+table.msl_table {
+	border: 1px solid #000 !important;
+	width: 99.5%;
+	margin: 1em 0;
+	border-collapse:collapse;
+	clear:both;
+}
+table.msl_table th {
+	background: #000 url(images/interface/msl_table_header.png) repeat-x 0 0;
+	color: #fff;
+	border-bottom: 1px solid #7b7b7b;
+	text-align: left;
+	border-right: 1px solid #666;
+	padding: 3px;
+	font-size: 85%;
+	font-weight: bold;
+}
+table.msl_table th[align=right] {
+       text-align:right;
+}
+table.msl_table th[align=center] {
+       text-align:center;
+}
+.msl_table tr {
+	border: 0;
+}
+.msl_table .msl_row {
+	background-color: #f9f9f9;
+	color: #000;
+}
+.msl_table .msl_altrow {
+	background-color: #fff;
+	color: #000;
+}
+.msl_table .msl_row:hover {
+	background-color: #f0f0f0;
+}
+.msl_table .msl_altrow:hover {
+	background-color: #f3f3f3;
+}
+
+.msl_table .rowhighlight tr:hover {
+	background-color: #f0f0ff;
+}
+
+.msl_table td {
+	padding: 3px;
+	border-bottom: 1px solid #ccc;
+	}
+.msl_table .msl_row td {
+	border-right: 1px solid #eee;
+}
+.msl_table .msl_altrow td {
+	border-right: 1px solid #eee;
+}
+.msl_table td.number, .msl_table td[align=right] {
+	text-align: right;
+}
+.gvPage td {
+	padding: 1px 2px;
+}
+.msl_table th.date {
+	width: 8em;
+	white-space: nowrap;
+}
+.msl_table td.control {
+	
+	text-align: center;
+}
+
+.msl_table th.control {
+	width: 18px;
+	text-align: center;
+	font-size: 70%;
+	font-weight: bold;
+	color: #999;
+}
+
+/* Table col shrinks to fit header text without wrapping */
+.msl_table th.shrinky {
+    width: 18px;
+    white-space:nowrap;
+}
+
+.msl_table th.control-edit {
+	width: 42px;
+}
+/* Command fields - hide text */
+.msl_table th.control {
+    font-size:0;
+    text-indent:-5000px;
+    overflow: hidden;
+}
+
+.msl_table a[class^="msl_"] {
+    text-indent: -5000px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.msl_table a.msl_warning, .msl_table a.msl_error {
+    text-indent:0;
+}
+ 
+/*=======================================================
+
+	Comments
+
+=======================================================*/
+.comment_panel {
+	clear: both;
+}
+
+/* temp while the comment box is a textarea not an editor instance */
+.comment textarea.textbox {width:100%;}
+
+dl.comments {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+dl.comments dt {
+	width: 100px;
+	float: right;
+	clear: both;
+	margin: 0 0 1em 0;
+	padding: 5px 5px 5px 15px;
+	background: url(/skins/images/comment_right.gif) no-repeat 0 0;
+	text-align: center;
+}
+dl.comments dd {
+	display: block;
+	min-height:7em;
+	margin: 0 120px 0.5em 0;
+	border: 1px solid #eee;
+	padding: 0;
+	clear: none;
+}
+dl.comments dt img.avatar {
+	display: block;
+	margin: 0 auto;
+	width: 50px;
+}
+dl.comments span.comment_details {
+	display: block;
+	background: #eee;
+	color: #999;
+	position: relative;
+	padding: 0.25em 0 0.25em 0.6em;
+	font-size: 70%;
+}
+dl.comments span.comment_date {
+	
+}
+dl.comments span.comment_delete {
+	display: block;
+	position: absolute;
+	top: 2px;
+	right: 5px;
+}
+dl.comments span.comment_delete a {
+	color: #c33;
+	text-decoration: none;
+}
+dl.comments span.comment_delete a:hover {
+	text-decoration: underline;
+}
+dl.comments span.comment {
+	display: block;
+	padding: 0.5em;
+}
+#add_comment dd {
+	border-color: #09c;
+}
+#add_comment span.comment_details {
+	background-color: #09c;
+}
+dl.comments span.comment_details h3 {
+	color: #fff;
+	margin: 0;
+	font-size: 85%;
+	padding: 0;
+}
+#add_comment dt {
+	background-image: url(/skins/images/comment_right_on.gif)
+}
+/*=======================================================
+
+	Form Layouts
+
+=======================================================*/
+	
+
+
+.mvWrapper {
+	margin: 1em 0;
+	width: 100%;
+	}
+.mvMenu {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0 0 -1px 0;
+	padding: 0;
+	width: 100%;
+	border-left: 1px solid #999;
+	}
+.mvMenu ul {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.mvMenu li {
+	display: block;
+	float: left;
+	margin: 0 !important;
+	padding: 3px 0.5em;
+	border: 1px solid #999;
+	border-left: none;
+	background: #f3f3f3 url(images/interface/tab.gif) repeat-x 0 0;
+	}
+.mvMenu li a {
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: #666;
+	}
+.mvMenu li.right {
+	float: right;
+	margin-right: 1px;
+	border-left: 1px solid #999;
+	}
+.mvMenu li a.current {
+	color: #c00;
+	font-weight: bold;
+	border-bottom-color: #fff;
+	}
+.mvMenu li a.disabled {
+	color: #ccc;
+	}
+
+.mv {
+	clear: both;
+	border: 1px solid #999;
+	padding: 0;
+	}
+.mvNav {
+	clear: both;
+	background: #ccc;
+	border: 1px solid #999;
+	border-top: 0;
+	padding: 3px 1em;
+	text-align: right;
+	}
+	
+.vpForm {
+	display: block;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+.vpForm p {
+	padding: 0.5em;
+	margin: 0;
+	color: #333;
+	}
+.vpForm fieldset {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;	
+	border-bottom: 1px solid #f3f3f3;
+}
+.vpForm legend {
+	margin: 1em 0 0.5em 0;
+	padding: 0;
+	color: #333;
+	font-size: 1.2em;
+	font-weight: bold;
+	font-family: Tahoma;
+	}
+.vpForm .vpFormPair {
+	margin-left: 15em;
+	padding: 0.5em;
+	position: relative;
+	background: #f3f3f3 url(images/vpFormPairBG.jpg) repeat-y 0 0;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	z-index: 1;
+	}
+
+.vpForm .vpDate,
+.vpForm .vpPopup {
+	z-index: 100;
+}
+
+.vpForm .vpFormSubmit {
+	margin-left: 15em;
+	padding: 0.5em;
+	position: relative;
+	background: #eee;
+	border-top: 1px solid #999;
+	border-left: 1px solid #ccc;
+	}
+.vpForm .title  {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -15.5em;
+	width: 13.5em;
+	padding: 0.5em 1em 0.5em 0.5em;
+	text-align: right;
+	font-weight: bold;
+	color: #666;
+	font-style: italic;
+	border-top: 1px solid #f3f3f3;
+	}
+	
+	
+.vpFormFlat {
+	display: block;
+}
+.vpFormFlat .vpFormPair {
+	display: block;
+	}
+.vpFormFlat .vpFormSubmit {
+	
+	}
+.vpFormFlat .title  {
+	font-weight: bold;
+	display: block;
+	}
+	
+	
+.vp_form {
+	width: 99%;
+	padding: 0;
+	margin: 0;
+	}
+
+.vp_form .vpFormPair ,
+.vp_form .vpFormSubmit {
+	display: block;
+	padding: 7px 15px 7px 8px;
+	margin: 0 2px;
+	overflow: visible;
+}
+/* Make sure calendar extender is displayed above other form controls */
+.vp_form .vpDate,
+.vp_form .vpPopup {
+
+}
+.vp_form .vpFormSubmit {
+	background: #f9f9f9;
+	border-top: 1px solid #eee;
+	margin: 1em 0 0 0;
+	padding: 1em;
+}
+.vp_form input.button_submit {
+	background: url(/skins/images/icons/16/check2.gif) no-repeat 0 50%;
+	padding-left: 16px;
+}
+.vp_form input.button_cancel {
+	background: url(/skins/images/icons/16/delete2.gif) no-repeat 0 50%;
+	padding-left: 16px;
+	border-color: #ccc;
+	font-weight: normal;
+	
+}
+
+.vp_form .title {
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	color: #333;
+}
+.vp_form .vp_highlight  {
+	/*background-image: url(/skins/images/form_bg.gif);*/
+	background: #cde5fd;
+}
+
+
+.vp_form p {
+	padding: 0.5em;
+	margin: 0;
+	color: #333;
+	}
+.vp_form fieldset {
+	margin: 1em 0;
+	padding: 0.25em 1em;
+	border: 0;
+	border-top: 1px dotted #ccc;
+}
+.vp_form legend {
+	color: #666;
+	font-size: 1em;
+	font-weight: bold;
+	font-style: italic;
+	padding: 0 0.25em;
+	margin: 0.5em 0;
+	background: #fff;
+	}
+
+.vp_form .vp_content {
+	display: block;
+	margin: 5px 0;
+}
+.vp_form h3.form_title {
+	color: #333;
+	display: block;
+	padding: 1em 10px;
+	margin: 0;
+	position: relative;
+	z-index: 1;
+	background: #f9f9f9;
+	border-bottom: 1px solid #eee;
+	
+}
+
+.vp_form .vpFormPair:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.vp_form .vp_hint {
+	display: block;
+	color: #666;
+	font-size: 85%;
+}
+
+
+.vp_form input.textbox ,
+.vp_form textarea.textbox { width: 20em; font-size: 100%; }
+
+.vp_form input.small { width: 10em; }
+.vp_form input.medium { width: 20em; }
+.vp_form input.large { width: 30em; }
+
+.vp_form textarea.small { width: 10em; height: 3em; }
+.vp_form textarea.medium { width: 20em; height: 10em; }
+.vp_form textarea.large { width: 30em; height: 20em; }
+
+.vp_form textarea.max { width: 40em; }
+
+.vp_form input.date_date { width: 5.5em; }
+.vp_form input.date_time { width: 3em; }
+
+.vp_form input.address { width: 20em; }
+.vp_form input.post_code { width: 8em; }
+
+.vp_form label {margin-left:0; /* Bootstrap reset */}
+
+.vp_form .toggle-wrapper {display: flex;}
+.vp_form .toggle-wrapper > a {
+    text-decoration: none;
+    padding: 3px 6px;
+    border: 1px solid #337ab7;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.2s ease all;
+    background: #fff;
+    color: #000;
+}
+.vp_form .toggle-wrapper > a:hover {
+	background: #337ab7;
+	color: #fff;
+}
+.vp_form .toggle-wrapper a + a {
+	margin-left: 0.5rem;
+}
+.vp_form .toggle-wrapper > div {
+	flex-grow:1;
+	margin-left: 0.5rem;
+	margin-bottom: 0.5rem;
+	position: relative;
+}
+.vp_form .toggle-wrapper input[type="text"] {
+	padding: 3px 6px;
+	font-size: 0.9rem;
+	width: 100%;
+}
+.vp_form .toggle-wrapper .msl-filter-clear {
+	position: absolute;
+	right: 0.25rem;
+	top: 50%;
+	transform: translateY(-50%);
+	margin:0;
+	padding:0;
+	text-decoration: none;
+	font-size: 0.9rem;
+	cursor: pointer;
+	transition: 0.2s ease all;
+	line-height:1;
+	padding: 3px;
+	border-radius: 3px;
+}
+.vp_form .toggle-wrapper .msl-filter-clear:hover {
+	color: #fff;
+	background: #900;
+}
+
+/* hide hints icon on forms that are not in the new style yet */
+.iconopenhints, .iconclosehints {display:none;}
+
+#form_controls {
+	text-align: center;
+}
+#form_controls input.button {
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	font-size: 100%;
+}
+.vp_form span.vp_range {
+	display: block;
+    float:left;
+	white-space: nowrap;
+}
+.vp_form span.vp_rangeitem {
+	white-space: nowrap;
+}
+.vp_form span.vp_rangeseparator {
+}
+
+.vp_form .form_error 
+{
+	display: inline;
+	color: #c00;
+	font-size: 85%;	
+}
+
+
+#passwordStrength 
+{
+	display: block;
+	visibility: hidden;
+	width: 224px;
+}
+#passwordStrength span {
+	display: block;
+	float: left;
+	width: 68px;
+	border: 1px solid #ccc;
+	text-align: center;
+	font-size: 85%;
+	padding: 2px;
+	color: #ccc;
+	background-color: #fff;
+}
+#passwordStrength.pass_weak span.password_weak {
+	color: #fff;
+	background-color: #c00;
+}
+#passwordStrength.pass_ok span.password_ok {
+	color: #666;
+	background-color: #cc0;
+}
+#passwordStrength.pass_good span.password_good {
+	color: #fff;
+	background-color: #393;
+}
+
+/* 48px icon grid layout */
+#msl ul.msl_linkgrid {
+	display: block;
+	clear: both;
+	list-style: none;
+	width: 90%;
+	margin: 1em;
+}
+#msl ul.msl_linkgrid li {
+	display: inline;
+
+}
+#msl ul.msl_linkgrid li a {
+	display: block;
+	float: left;
+	position: relative;
+	width: 130px;
+	min-height: 3.6em;
+	overflow: visible;
+	padding-top: 58px;
+	margin: 5px;
+	text-decoration: none;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: 50% 5px;
+}
+#msl ul.msl_linkgrid li a:hover {
+	background-color: #94b8dc;
+}
+#msl ul.msl_linkgrid li a span  
+{
+    font-size: 85%; 
+    color: #666; 
+    display: block; 
+}
+
+ul.msl_linkgrid li a.msl_linkgrid_news { background-image: url(/skins/images/icons/48/newspaper.png); }
+ul.msl_linkgrid li a.msl_linkgrid_events { background-image: url(/skins/images/icons/48/calendar_31.png); }
+ul.msl_linkgrid li a.msl_linkgrid_tickets { background-image: url(/skins/images/icons/48/eventtickets.png); }
+ul.msl_linkgrid li a.msl_linkgrid_attendance { background-image: url(/skins/images/icons/48/icon-attendance-48.png); }
+ul.msl_linkgrid li a.msl_linkgrid_pages { background-image: url(/skins/images/icons/48/text_rich_colored.png); }
+ul.msl_linkgrid li a.msl_linkgrid_details { background-image: url(/skins/images/icons/48/about.png); }
+ul.msl_linkgrid li a.msl_linkgrid_members { background-image: url(/skins/images/icons/48/user_information.png); }
+ul.msl_linkgrid li a.msl_linkgrid_groups { background-image: url(/skins/images/icons/48/users2.png); }
+ul.msl_linkgrid li a.msl_linkgrid_signups { background-image: url(/skins/images/icons/48/hand_point2.gif); }
+ul.msl_linkgrid li a.msl_linkgrid_api { background-image: url(/skins/images/icons/48/gear.png) }
+ul.msl_linkgrid li a.msl_linkgrid_email { background-image: url(/skins/images/icons/48/mail_write.png); }
+ul.msl_linkgrid li a.msl_linkgrid_sms { background-image: url(/skins/images/icons/48/mobilephone2.png); }
+ul.msl_linkgrid li a.msl_linkgrid_poll { background-image: url(/skins/images/icons/48/chart_pie2.png); }
+ul.msl_linkgrid li a.msl_linkgrid_reports { background-image: url(/skins/images/icons/48/document_info.png); }
+ul.msl_linkgrid li a.msl_linkgrid_resources { background-image: url(/skins/images/icons/48/documents.png); }
+ul.msl_linkgrid li a.msl_linkgrid_permissions { background-image: url(/skins/images/icons/48/user1_lock.png); }
+ul.msl_linkgrid li a.msl_linkgrid_jobs { background-image: url(/skins/images/icons/48/desk.png); }
+ul.msl_linkgrid li a.msl_linkgrid_tripreg { background-image: url(/skins/images/icons/48/trips.png); }
+ul.msl_linkgrid li a.msl_linkgrid_meetings { background-image: url(/skins/images/icons/48/messages.png); }
+ul.msl_linkgrid li a.msl_linkgrid_products { background-image: url(/skins/images/icons/48/product.png); }
+ul.msl_linkgrid li a.msl_linkgrid_teamsheets { background-image: url(/skins/images/icons/48/teamsheets.png); }
+
+ul.msl_linkgrid li a.msl_linkgrid_newpage { background-image: url(/skins/images/icons/48/window_new.png); }
+ul.msl_linkgrid li a.msl_linkgrid_editpage { background-image: url(/skins/images/icons/48/window_edit.png); }
+ul.msl_linkgrid li a.msl_linkgrid_sitedesign { background-image: url(/skins/images/icons/48/window_colors.png); }
+ul.msl_linkgrid li a.msl_linkgrid_sitenavigation { background-image: url(/skins/images/icons/48/window_sidebar.png); }
+ul.msl_linkgrid li a.msl_linkgrid_sitetoolbars { background-image: url(/skins/images/icons/48/window_dialog.png); }
+ul.msl_linkgrid li a.msl_linkgrid_siteimages { background-image: url(/skins/images/icons/48/photo_scenery.png); }
+ul.msl_linkgrid li a.msl_linkgrid_terms { background-image: url(/skins/images/icons/48/documents.png); }
+ul.msl_linkgrid li a.msl_linkgrid_recaptcha { background-image: url(/skins/images/icons/48/recaptchalogo.png); }
+ul.msl_linkgrid li a.msl_linkgrid_sgf { background-image: url(/skins/images/icons/48/sgf-48.png); }
+ul.msl_linkgrid li a.msl_linkgrid_activities { background-image: url(/skins/images/icons/48/activities_icon.png); }
+ul.msl_linkgrid li a.msl_linkgrid_fundraising { background-image: url(/skins/images/icons/48/funds2.png); }
+ul.msl_linkgrid li a.msl_linkgrid_contactrequests {	background-image: url(/skins/images/icons/48/messages.png); }
+ul.msl_linkgrid li a.msl_linkgrid_volunteering { background-image: url(/skins/images/icons/48/volunteering.png); }
+ul.msl_linkgrid li a.msl_linkgrid_surveys { background-image: url(/skins/images/icons/48/clipboard.png);
+}
+
+/*------------------------------------------------------------------------------------------------------------
+The following are override styles specifically for the admin pages only
+--------------------------------------------------------------------------------------------------------------*/
+
+/* ------------------------------- 
+ admin page general styles 
+ --------------------------------- */
+ 
+ /* padding on admin page container */    
+.msl_admin_page {padding: 1em;}
+
+/* Hide breadcrumb on all admin pages. */
+.msl_admin_page .breadcrumb {display:none ;}
+
+/* Replacement styles for new admin toolbar */
+
+.msl-toolbar {
+    margin: 1rem -.5rem 0;
+}
+
+.msl-toolbar-sub {
+    border: 1px solid #ccc;
+    padding: .75rem 0.35rem 0rem;
+    display: inline-block;
+    margin: 0;
+    border-radius: 2px;
+    background: #eee;
+}
+
+.msl-toolbar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.msl-toolbar ul li {
+    padding: 0;
+    margin: 0;
+}
+
+.msl-toolbar ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem 1rem;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 3px;
+    color: #000;
+    transition: 0.2s ease all;
+}
+
+.msl-toolbar ul li a:hover {
+    border-color: #aaa;
+    background: #37c;
+    color: #fff;
+}
+
+.msl-toolbar ul li a.active {
+    background: #37c;
+    color: #fff;
+    border-color: #039;
+    font-weight: bold;
+}
+
+/* --------------------------- 
+ admin page form styles
+ --------------------------- */
+
+/* clear containing divs */
+@media all and (min-width:992px) {
+    .msl_admin_page .vp_content {
+        padding: 0;
+        margin: 0 0 0 11em;
+    }
+}
+.msl_admin_page .vp_form .vpFormPair {
+                float:left;
+                clear:left;
+                max-width:100%;
+}
+
+.page_widget .msl_admin_page .vp_form .vpFormPair {
+   float: none;
+}
+
+/* checkbox list */
+.msl_admin_page .vp_form .checkbox table{margin:0;padding:0;float:left;} 
+.msl_admin_page .vp_form .checkbox table input{margin-left:0;}
+
+/* style the fieldsets */
+.msl_admin_page .vp_form fieldset {border: solid 1px #ccc;padding:0.5em;margin:0;}
+.msl_admin_page .vp_form legend {font-style:normal;font-weight:bold;padding: 0.3em;}
+
+/* style the labels*/
+.msl_admin_page .vp_form .title {display:block; margin:0 0 0.5em; padding:0;clear:both;font-weight:normal;}
+@media all and (min-width:992px) {
+    .msl_admin_page .vp_form .title {float:left;width:10em;text-align:right; margin:0 1em 0 0;}
+}
+
+/* set widths for input fields */
+.msl_admin_page .vp_form input {float:left;display:block; width:15em;padding:0;margin:0;}
+.msl_admin_page .vp_form input + label {float:left;}
+.msl_admin_page .vp_form textarea {float:left;margin-right:5px; max-width:100%;}
+.msl_admin_page .vp_form select{float:left; max-width:100%;}
+.msl_admin_page .vp_form label {margin:0 1em 0 0.5em;}
+
+/* Override default widths for event page date recurrence */
+.vp_form [id*="DateRecurrence"] .vpFormPair input, .vp_form [id*="DateRecurrence"] .vpFormPair select {width:auto;float: none;display: inline-block;}
+
+/* width defaults to 15em as above, but can use these to change that */
+@media all and (min-width:768px) {
+    .msl_admin_page .vp_form input.small {
+        width: 10em;
+    }
+
+    .msl_admin_page .vp_form input.medium {
+        width: 20em;
+    }
+
+    .msl_admin_page .vp_form input.large {
+        width: 30em;
+    }
+
+    .msl_admin_page .vp_form textarea.small {
+        width: 10em;
+        height: 3em;
+    }
+
+    .msl_admin_page .vp_form textarea.medium {
+        width: 20em;
+        height: 10em;
+    }
+
+    .msl_admin_page .vp_form textarea.large {
+        width: 30em;
+        height: 20em;
+    }
+}
+/* special styles for the date control*/
+.msl_admin_page .vp_form input.date_date { float:left; width: 8em; }
+.msl_admin_page .vp_form input.date_time { float:left; width: 5em; }
+.msl_admin_page .vp_range img {display:block;float:left; margin-left:0.5em; margin-right:0.5em; margin-left:0.25em;}
+.msl_admin_page .vp_range span.vp_rangeseparator {display:block;float:left; margin-right:0.5em;margin-left:0; border:1px solid transparent;}
+.msl_admin_page .vp_content span.vp_rangeseparator {display:block; float:left; margin: 0 0.25em;}
+.msl_admin_page .vp_content .msl_datepicker{float:left;}
+
+/* allows for checkbox text to be set using either title or text */
+@media all and (min-width:992px) {
+    .msl_admin_page .vp_form .checkbox {
+        margin-left: 11em;
+    }
+}
+.msl_admin_page .vp_form .checkbox input {width:auto;margin:0;}
+.msl_admin_page .vp_form .checkbox label{clear:none;text-align:left;width:auto;display:block;float:left;margin-right:0;padding-left:0;}
+
+/* temporary styles for embedded forms on the elections pages */
+@media all and (min-width:992px) {
+	.msl_admin_page .msl-embedded-survey .vp_content {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.vp_form .msl-embedded-survey p {
+	padding: 0.5em 0;
+}
+
+.msl_admin_page .vp_form .msl-embedded-survey .title {
+	font-weight: 700;
+	margin: 1em 0 0.5em 0;
+}
+
+.msl_admin_page .vp_form .msl-embedded-survey .vpFormPair:first-of-type .title {
+	margin: 0 0 0.5em 0;
+}
+
+@media all and (min-width:992px) {
+	.msl_admin_page .vp_form .msl-embedded-survey .title {
+		float: none;
+		display: inline-block;
+		width: auto;
+		text-align: right;
+		margin: 1em 0 0.5em 0;
+	}
+
+	.msl_admin_page .vp_form .msl-embedded-survey .vpFormPair:first-of-type .title {
+		margin: 0 0 0.5em 0;
+	}
+}
+
+.msl_admin_page .vp_form .msl-embedded-survey input {
+	float: none;
+	display: inline-block;
+	width: auto;
+	padding: 0;
+	margin: 0;
+}
+
+.msl_admin_page .vp_form .msl-embedded-survey input + label {
+	float: none;
+	display: inline-block;
+}
+
+.msl_admin_page .vp_form .msl-embedded-survey textarea {
+	float: none;
+}
+
+.msl_admin_page .vp_form .msl-embedded-survey select {
+	float: none;
+}
+
+.vp_form p:empty {
+	padding: 0;
+}
+
+.msl_admin_page .vp_form .msl-embedded-survey .checkbox label {
+	margin-right: 1em;
+}
+
+.msl_admin_page .msl-embedded-survey .vp_content .msl_datepicker {
+	float: none;
+	display: inline-block;
+	margin-left: 0.5em;
+}
+
+.msl-embedded-survey-user fieldset {
+	margin-top: 2em;
+}
+
+.msl-embedded-survey-user .vpFormPair {
+	margin-top: 1em;
+}
+
+.msl-embedded-survey-user .vpFormPair:first-of-type {
+	margin-top: 0;
+}
+
+.msl-embedded-survey-user .vpFormPair .title {
+	font-weight: 700;
+}
+
+/* end temporary styles for embedded forms */
+
+/* New styles for HTMLeditor control (Froala) */
+
+.title + .fr-box {
+	clear:left;
+}
+@media all and (min-width:992px) {
+	.title.sidebyside + .fr-box {
+		clear: none;
+		margin-left: 11rem;
+	}
+}
+
+/* special styles for the editor control */
+.msl_admin_page .editor {clear:left;}
+
+@media all and (min-width:992px) {
+    .msl_admin_page .editor.sidebyside {
+        clear: none;
+        padding-left: 11em;
+        width: auto;
+    }
+}
+/* if the 'fullwidth' AdminLayout is used */
+.msl_admin_page .vpFormPair.fullwidth { float:none; width:auto;}
+@media all and (min-width:992px) {
+    .msl_admin_page .fullwidth .hint-text, .msl_admin_page .fullwidth .hint-text:hover {
+        margin-left: 11em;
+        margin-top: 1em;
+    }
+}
+/* special styles for the news layout control*/
+.msl_admin_page .vp_form .control_editor_newslayout select{clear:both;}
+.msl_admin_page .vp_form .control_editor_newslayout .vp_content{float:left;}
+
+/* 'URL' prefixes for textboxes */
+.msl_admin_page .vp_form span.sidebyside {
+    float: left;
+}
+@media (max-width: 769px) {
+    .msl_admin_page .vp_form span.sidebyside {
+        width: 100%;
+    }
+}
+
+/* styles the dropdown icon for select group control */
+.msl-selectgroup-image{float:left;}
+.msl-selectgroup-image:hover{cursor:pointer;}
+
+/* Forces the expand and grouping type icons to have width*/
+
+[id*="tvGroups"] td a img {min-width:20px;}
+
+/* style action buttons */
+.msl_admin_page .vp_form .vpFormSubmit {clear:both; padding: 0 0 0 0; margin: 1em 0 1em 0; background:none;border:none;}
+.msl_admin_page .vp_form fieldset .vpFormSubmit {padding: 10px 0 0 10px; margin:0.5em 0 1em 0}
+.msl_admin_page .vp_form input.button { width:auto; padding:0 1em 0 1em; margin-right:1em;}
+
+@media all and (min-width:992px){
+    .msl_admin_page .vp_form .vpFormSubmit {
+        padding: 0 0 0 13em;
+    }
+    .msl_admin_page .vp_form fieldset .vpFormSubmit{
+        padding: 0 0 0 11.75em;
+    }
+}
+
+/* align error messages to inputs */
+.msl_admin_page .vp_form .form_error {margin-left:13em;}
+.msl_admin_page .vp_form .ad_preview_box {float:left;}
+
+/* styles for form hints */
+.msl_admin_page .hint-text, .msl_admin_page .defaultdisplay{display:block;float:left;position:relative;}
+.msl_admin_page .vp_form .hint-text span {position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;display:block;} 
+.msl_admin_page .vp_form .vp_highlight .hint-text span, .msl_admin_page .hint-text:hover span, .msl_admin_page .vp_form .defaultdisplay span{margin-left:0em;padding:10px;width:250px;height:auto;overflow:visible;position:absolute;left:25px;top:-15px; line-height:1.3; border-radius: 3px 3px 3px 3px; box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.1);border:3px solid #acde8e; z-index:2;background:#e0fecf;}
+.msl_admin_page .hint-text:hover,.msl_admin_page .defaultdisplay{z-index:2;}
+
+/* styling for 'always on' and 'initially on' hints */
+.msl_admin_page .vp_form .vp_hintsdisplaying{display:block;clear:both;margin-left:0em;padding:5px 0 0 0;}
+.msl_admin_page .vp_form .defaultdisplay span a.closehint{position:absolute;text-indent:-3000px;top:-12px;right:-12px;padding-top:12px;padding-left:15px;}
+.msl_admin_page .vp_form .hint-text span a.closehint{display:none;}
+
+/* ------------------------------------
+  Poll Admin page colour picker styles 
+ --------------------------------------*/
+
+.vp_content.colour-preview {
+    float:left;
+    width:3.5em;
+    margin:0 0.5em 0 0;
+}
+ 
+.vp_form .vp_content.colour-preview + input {
+    width:11em;
+}
+
+ /* ------------------------------------
+  Admin page data tables and editing grids 
+ --------------------------------------*/
+ 
+.msl_admin_page table.msl_table {border: 1px solid #999 !important; width: 99.5%;margin: 1em 0;border-collapse:collapse;}
+.msl_admin_page table.msl_table th {background: #d7d7d7;color: #000;border-bottom:1px solid #999;text-align: left;border-right: 1px solid #999;padding: 5px;font-size: 85%;font-weight: bold;}
+.msl_admin_page .msl_table tr {border: 0;}
+.msl_admin_page .msl_table .msl_row {background-color: #eee;color: #000;}
+.msl_admin_page .msl_table .msl_altrow {background-color: #fff;color: #000;}
+.msl_admin_page .msl_table .msl_row:hover {background-color: #d2efc5;}
+.msl_admin_page .msl_table .msl_altrow:hover {background-color: #d2efc5;}
+.msl_admin_page .msl_table .rowhighlight tr:hover {background-color: #d2efc5;}
+.msl_admin_page .msl_table td {padding: 5px;border-bottom: none;}
+.msl_admin_page .msl_table .msl_row td {border-right: none;}
+.msl_admin_page .msl_table .msl_altrow td {border-right: none;}
+.msl_admin_page .msl_table td.number {text-align: right;}
+.msl_admin_page .msl_table th.number {text-align: right;}
+.msl_admin_page .gvPage td {padding: 1px 2px;}
+.msl_admin_page .msl_table th.date {width: 8em;white-space: nowrap;}
+.msl_admin_page .msl_table td.control {text-align: left;}
+.msl_admin_page .msl_table th.control {width: 18px;text-align: left;font-size: 85%;font-weight: bold;color: #000;}
+.msl_admin_page .msl_table th.control-edit {width: 42px;}
+.msl_admin_page .msl_table td input {width: auto; }
+.msl_admin_page .vp_content td input { width:auto; }
+
+.msl_admin_page table.msl_table tr.footer td {background: #d7d7d7;color: #000;border-top:1px solid #999;text-align: left;border-right: 1px solid #999;padding: 5px;font-size: 85%;font-weight: bold;}
+.msl_admin_page table.msl_table tr.footer-right td {background: #d7d7d7;color: #000;border-top:1px solid #999;text-align: right;border-right: 1px solid #999;padding: 5px;font-size: 85%;font-weight: bold;}
+
+.msl_admin_page .msl_table caption {font-weight: bold; padding:5px; background:#d7d7d7; 
+                                    border-top: 1px solid #999; border-left: 1px solid #999; 
+                                    border-right: 1px solid #999; border-collapse:collapse;caption-side:top;}
+
+.msl_admin_page div.pagesize {
+    float:right;
+}
+.msl_admin_page .paging + div.pagesize {
+    margin: 1rem;
+}
+
+/* -------------------------------------------------------------- 
+ report page styles
+ ---------------------------------------------------------------- */
+
+/* Sets height of report display */
+.msl_admin_page .report_viewer iframe {height:600px !important;}
+
+/* Wrapper div for report viewer control */
+.msl_admin_page #report_viewer_wrapper {padding-top:16px;margin-top:2.5em;overflow-y:scroll;}
+/* Removing unnecessary scrollbars */
+.msl_admin_page #report_viewer_wrapper {
+    overflow-y: hidden;
+}
+
+#ctl00_ctl00_Main_AdminPageContent_ReportViewer1 .ToolBarButtonsCell {
+    overflow: visible;
+}
+#ctl00_ctl00_Main_AdminPageContent_ReportViewer1 .ToolBarButtonsCell > div {
+    display: inline-block !important;
+}
+
+
+/* ------------------------------------------------------------- 
+ filter panel styles
+ --------------------------------------------------------------- */
+
+.msl_admin_page .filter_panel {border:solid 1px #999; padding:0.5em; background:#eee;color:#000;}
+.msl_admin_page .filter_panel select, .msl_admin_page .filter_panel input {margin-right:0.5em;margin-top:0.5em;display: inline-block;float: none;}
+.msl_admin_page .filter_panel .button {margin-left:1em;float: none;}
+.filter_panel:before, .filter_panel:after {content:"";display:table;}
+.filter_panel:after {clear:both}
+
+/* Replacement filter panel styles, note "-" rather than "_" */
+
+.filter-panel {
+	display: flex;
+	flex-wrap: wrap;
+	padding: .5rem 2rem 2rem;
+	background: #eee;
+	border: 1px solid #ccc;
+}
+
+	.filter-panel legend {
+		background: #ccc;
+		padding: 0.5rem 1rem;
+		margin: 0;
+		width: auto;
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+
+	.filter-panel > .input-wrap {
+		margin-right: 2rem;
+		margin-top: .5rem;
+	}
+
+	.filter-panel input {
+		margin: auto 0 0;
+	}
+
+.input-wrap > * {
+	display: block;
+}
+
+.input-wrap > label {
+	margin: 0;
+}
+
+@media all and (max-width: 600px) {
+	.filter-panel * {
+		width: 100%;
+	}
+
+	.filter-panel > .input-wrap {
+		margin: 0rem 0 1rem;
+	}
+
+	.filter-panel > input {
+		margin-top: 1rem;
+	}
+}
+
+
+/* ------------------------------------------------------------- 
+ panel containing 'action' links
+ --------------------------------------------------------------- */
+.msl_admin_page .actions_panel { margin: 1em 0 1em 0 }
+
+/* -------------------------------------------------------------
+ AJAX Control Toolkit accordion styles
+----------------------------------------------------------------- */
+.msl_admin_page .ac-header {border:solid 1px #999; background:#eee; padding:1em;}
+.msl_admin_page .ac-selected-header {border:solid 1px #999; background:#eee; padding:1em; font-weight:bold; }
+.msl_admin_page .ac-content {border:solid 1px #999; padding:1em; }
+
+/* nested accordion styles */
+.msl_admin_page .ac-content .ac-header {border:solid 1px #999; background:#ccc; padding:1em;}
+.msl_admin_page .ac-content .ac-selected-header {border:solid 1px #999; background:#ccc; padding:1em; font-weight:bold; }
+
+
+/* temp - local testing */
+.ac-header {border:solid 1px #999; background:#eee; padding:1em;}
+.ac-selected-header {border:solid 1px #999; background:#eee; padding:1em; font-weight:bold; }
+.ac-content {border:solid 1px #999; padding:1em; }
+
+
+.msl_admin_page .vp_content.editor {margin:0;}
+
+/* special styles for the postal address control */
+.vp_form .title.address_title {
+	margin-bottom: 0.5rem;
+	/*font-weight: bold;*/
+}
+.vpFormPair[id*="postalAddress"] > div {
+	padding: 0;
+}
+.msl_admin_page .multilineaddress {float:left;display:block;width:10em;text-align:right; margin:0 1em 0 0; padding:0;clear:both;font-weight:normal;}
+.msl_admin_page .multilineaddress {margin-bottom:0.5em;}
+.vp_form .multilineaddress + .vp_content input.address, .vp_form .multilineaddress + .vp_content input.post_code {
+	margin-bottom: 0.5rem;
+}
+.msl_admin_page .clear_address {float:left;clear:both;}
+.msl_admin_page .vp_form input .countrydropdown {display:inline-block; width:15em;padding:0;margin:0;}
+
+.form-address .vp_content {float:left;}
+.msl_admin_page .form-address .vp_content {float:none;margin-top:2em;}
+.form-address .vp_content label {width:8em;display:inline-block;margin: 0 0 0.5em;}
+.msl_admin_page .form-address .vp_content label {margin: 0 1em 1em -9em;}
+.form-address .vp_content select, .form-address .vp_content input {margin-bottom:0;}
+.form-address .clear_address {display: inline-block;color: #900;}
+
+/* fixing the checkbox list... 
+.msl_admin_page .vp_form input[type=checkbox] {margin: 0 0.5em 0 0;}
+.msl_admin_page .vp_content table td {padding: 0.5em 2em 0.5em 0;} */
+
+/* spacing div for single buttons below other controls e.g. select organisation */
+.spacing-divider
+{
+    padding-top:12px;
+}
+
+/* add scrollbars to checkbox lists */
+
+.msl_admin_page .scroll_checkbox_list 
+{ 
+    overflow: auto; 
+    border: solid 1px;
+    width: 100%;
+    height: 200px;       
+}
+
+.msl_admin_page .scroll_gridview
+{
+    overflow-y:scroll;
+    overflow-x:hidden;
+    width: 98%;
+    height: 300px;
+    padding-right:15px;
+    margin-bottom:20px; 
+}
+
+.msl_admin_page .info_panel
+{
+    background-color:InfoBackground ; 
+    color: InfoText;
+    font-weight: bold;
+    padding:6px;
+    margin-top:6px;
+}
+
+.msl_admin_page .popup, .vp_form.popup
+{
+   	width: auto;
+	border: 1px solid #999; 
+	background: #fff;
+	padding: 6px;
+	z-index:10001 !important;
+    max-height:90%;
+    max-width:95%;
+    overflow-y:auto;
+}
+.vp_form.popup .vp_form {
+	width: 100%;
+}
+.vp_form.popup fieldset:only-of-type {
+	border: none;
+}
+.vp_form.popup fieldset:only-of-type legend {
+	margin-top:0;
+}
+
+.msl_admin_page .vp_form.popup .vpFormSubmit {
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+	margin: 0 -6px -6px;
+    text-align: left;
+    background: #fafafa;
+}
+
+.msl_admin_page .vp_form.popup fieldset .vpFormSubmit {
+	margin: 0 -14px -14px;
+}
+
+.vp_form.popup .vpFormSubmit .button {
+	margin: 0 1rem 0 0 !important;
+	padding: 0.5rem !important;
+	float: none;
+	display: inline-block;
+}
+.vp_form.popup .vpFormSubmit .button:last-of-type {
+	margin:0 !important;
+}
+.modalBackground
+{
+	z-index:10000 !important;
+}
+
+/* modal close button */
+.popup .msl-close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    border: none;
+    font-size: 2rem;
+    line-height: 0;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    transition: 0.2s ease all;
+    cursor: pointer;
+}
+
+	.popup .msl-close:hover, .popup .msl-close:focus {
+		background: #900;
+		color: #fff;
+	}
+
+/* style for 'add new' links in the middle of forms */
+.msl_admin_page .msl-addnew {
+                float:left;
+                padding:8px 0;
+                font-size:smaller;
+}
+/* style for review registrations button keys */
+/* style for review registrations button keys */
+.tool-key-wrap {
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-items: center;
+}
+.tool-key-wrap div.tools {
+	float:none
+}
+body div.button_key
+{
+    display: flex;
+    justify-content: end;
+    padding: 0;
+    clear:both;
+    align-items: center;
+}
+.button_key_label {
+	padding: 1rem;
+	line-height:1;
+	background: #ddd;
+}
+.button_key ul 
+{
+	background: #fff;
+	border: 1px solid #ccc;
+	margin: 0;
+	padding: 0.5rem;
+	display: flex;
+	list-style:none;
+	flex-wrap: wrap;
+}
+
+.button_key li
+{
+    margin: 0;
+    display: flex;
+    padding: 0.5rem;
+}
+
+.button_key li+li {
+	margin:0 0 0 1rem;
+}
+.button_key li span {
+	line-height:1;
+	padding-left: 1.25rem;
+}
+/* CollapsiblePanel extender classes */
+.msl_admin_page .showhidelink {
+    background: none repeat scroll 0 0 #ffc;
+    border: 1px solid #fc0;
+    color: #333333;
+    display: block;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 0.5em;
+    cursor:pointer;
+}
+
+.msl_admin_page .showhidelink:hover {
+    background:#ffa;
+    border: 1px solid #ca0;
+    box-shadow: 0 0 3px 0 #ccc;
+}
+
+/* survey checkboxlist/radiolist */
+.vp_content ul {
+    list-style: none;
+}
+
+/* containers for plain text, preserve spacing and newlines */
+.multi-line-plain-text {white-space:pre-wrap;}
+
+.msl-clearfloat {
+    clear: both;
+}
+
+.msl_admin_page .vp_content .image_preview {
+    max-width:100px; 
+    max-height:100px;
+}
+
+/* CKEditor style overrides */
+body .cke_combopanel{
+    width:250px;
+}
+
+/* Icon-enabled text columns */
+.msl_table .msl-no-text span {
+    text-indent: -5000px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Applied to content relevant for screenreaders only
+   The content can be read by a screenreader but is not visible on screen
+   Applies to caption on review basket page */
+.msl-visually-hidden, #reviewbasket .msl_table[id$="_gvItems"] caption, #reviewbasket .msl_table[id$="_gvSavedItems"] caption {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/* styles for embedded forms nested in admin pages*/
+
+.msl-embedded-form{
+
+}
+
+
+/* Slider control */
+
+.slider-wrap.vp_content {
+	display: inline-block;
+	text-align: center;
+}
+
+.qt_slider .title {
+	display: block;
+}
+
+.slider-wrap.vp_content > span.slider-value {
+	display: inline-block;
+	text-align: center;
+	background: #eee;
+	padding: 0.25rem 0.75rem;
+	font-weight: bold;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	margin-bottom: 0.5rem
+}
+
+.slider-bar-wrap {
+	display: flex;
+	align-items: center;
+}
+
+	.slider-bar-wrap > * + * {
+		margin-left: .5rem;
+	}
+
+	.slider-bar-wrap > span {
+		padding: 0.25rem .5rem;
+		background: #cda;
+		border-radius: 50%;
+		width: 2rem;
+		text-align: center;
+	}
+
+
+/* Finance Code modal */
+.msl-fc {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+	.msl-fc > div {
+		flex-grow: 1;
+	}
+
+		.msl-fc > div label, .msl-fc > div input {
+			display: block;
+			float: none;
+		}
+
+.vp_form .msl-fc > div label {
+	margin: 0 0;
+	font-size: 0.9rem;
+}
+
+.vp_form .msl-fc > div input {
+	margin: 0 1rem 0.5rem 0;
+	width: auto;
+	max-width: 180px;
+	padding: 0.25rem 0.5rem;
+}
+
+@media all and (max-width:600px) {
+	.msl-fc {
+		flex-direction: column;
+	}
+}
+
+/* DC form */
+
+.msl_admin_page fieldset.dc_form > div {
+	padding: .5rem;
+	margin: 0;
+}
+
+.msl_admin_page fieldset.dc_form .title {
+	display: block;
+	width: auto;
+	float: none;
+	text-align: left;
+	font-weight: bold;
+	margin-bottom: 0.25rem;
+}
+
+.msl_admin_page fieldset.dc_form input {
+	display: block;
+	width: 100%;
+	float: none;
+}
+
+.msl_admin_page fieldset.dc_form .error[style*="hidden"] {
+	display: none;
+}
+
+/* Search panel e.g. for Find Posts */
+.msl-search-panel {
+	display: flex !important;
+	align-items: center !important;
+	margin: 1rem;
+	font-size: 14px;
+	flex-wrap:wrap;
+}
+.msl-search-input-wrap {
+	display: flex;
+	flex-wrap:nowrap;
+	flex-grow:1;
+}
+.msl-search-panel .msl-search-label {
+	background: #eee !important;
+	padding: 7px 14px 7px 10px !important;
+	margin: 0 -5px 0 0 !important;
+	border: 1px solid #bbb !important;
+	color: #333 !important;
+	border-radius: 5px 0 0 5px;
+	text-wrap: nowrap;
+}
+.msl-search-panel input.textbox {
+	flex-grow:1;
+	padding: 7px 10px !important;
+	border-radius: 5px;
+	font-size: 14px !important;
+	border-color: #999;
+	margin:0 !important;
+}
+.msl-search-panel input.button {
+	margin:0 0 0 0.5rem !important;
+	padding: 7px 10px !important;
+	font-size: 14px !important;
+	flex-grow:1;
+	border: 1px solid transparent !important;
+	background: #337ab7 !important;
+	color: #fff !important;
+	transition: 0.2s ease all;
+	border-radius: 5px;
+}
+.msl-search-panel input.button + input.button {
+	background: #c00 !important;
+}
+.msl-search-panel input.button:hover {
+	border-color: #000 !important;
+	background: #fff !important;
+	color: #000 !important;
+}
+.msl-search-panel input.button + input.button:hover {
+	border-color: #c00 !important;
+	background: #fff !important;
+}
+@media all and (min-width:768px) {
+	.msl-search-panel input.button {
+		flex-grow:0;
+	}
+}
+
+/* Paging */
+
+.paging {
+	display: flex;
+	flex-wrap: wrap;
+}
+.paging-section {
+	flex-grow:1;
+	display: flex	
+}
+.paging-section a {
+	padding: .5rem;
+	text-decoration: none;
+	background: #ddd;
+	flex-grow:1;
+	text-align: center;
+	border: 1px solid #fff;
+	color: #000;
+	transition: 0.2s ease all;
+}
+.pages-wrapper {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+.pages-wrapper a {
+	background: #aaa
+}
+.paging-section a:hover, .paging-section a:focus, .paging-section a:active {
+	background: #333;
+	color: #fff;
+}
+
+.paging-section a[disabled] {
+	color: #aaa;
+	background: #eee;
+}
+.paging-section a[disabled][style] {
+	color: #fff;
+	background: #000;
+}
+
+.msl-info-panel[id]{
+	clear: both;
+	padding: 1rem;
+	margin:1rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	
+}
+.msl-info-panel[id] p {
+	flex: 4 1 min-content;
+	margin:0;
+	padding: 0 2rem;
+	background-position: left 50%;
+}
+
+.msl-info-panel[id] a {
+	background: #fc0;
+	color: #000;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+	transition: 0.2s ease all;
+	border: 1px solid transparent;
+}
+.msl-info-panel[id] a:hover {
+	background: #fff;
+	border: 1px solid #fc0;
+}
+
