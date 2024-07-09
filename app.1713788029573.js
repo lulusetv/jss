@@ -21,14 +21,14 @@ pe=(0,c.KR)(j),fe=(0,c.KR)(ue),ge=(0,c.KR)("/file/jump.mobileprovision"),Ae=func
 ("",!0),v.value?((0,u.uX)(),(0,u.CE)("div",V,[q,(0,u.Lk)("span",{class:"zxctab1",onClick:t[6]||(t[6]=function(e){return me()})},"苹果点击观看线路1"),J,
 (0,u.Lk)("span",
 {class:"zxctab1",onClick:t[7]||(t[7]=function(e){return he()})},"苹果点击观看线路2")])):(0,u.Q3)
-/*("",!0),v.value?((0,u.uX)(),(0,u.CE)("p",{key:3,class:"a1",onClick:be},"苹果下载安装教程")):(0,u.Q3)*/
+/*("",!0),v.value?((0,u.uX)(),(0,u.CE)("p",{key:3,class:"a1",onClick:be},"苹果安装教程")):(0,u.Q3)*/
 
 ("",!0),(0,u.Lk)
 ("p",{class:"onlinetab",onClick:t[8]||(t[8]=function(e){return Ae()})},"在线实时观看"),
 
 p.value?((0,u.uX)(),(0,u.CE)("div",_,[pe.value?((0,u.uX)(),(0,u.CE)("div",$,[ee,(0,u.bF)(h.A,{margin:10,class:"qrcodeimg",text:pe.value},null,8,["text"])])):(0,u.Q3)("",!0),
 
-fe.value?((0,u.uX)(),(0,u.CE)("div",te,[ne,(0,u.bF)(h.A,{margin:10,class:"qrcodeimg",text:fe.value},null,8,["text"])])):(0,u.Q3)("",!0)])):(0,u.Q3)("",!0),v.value?((0,u.uX)(),(0,u.CE)("p",ae,"苹果用户请用safari 苹果自带浏览器打开下载页面")):(0,u.Q3)("",!0),d.value?((0,u.uX)(),(0,u.CE)("p",re,"由于涉及成人视频,可能手机厂商会安装提示病毒")):(0,u.Q3)("",!0),d.value?((0,u.uX)(),(0,u.CE)("p",oe,"lulu色视频零权限隐私申请获取,完全放心体验")):(0,u.Q3)("",!0),d.value?((0,u.uX)(),(0,u.CE)("a",{key:8,class:"a2",onClick:t[9]||(t[9]=function(e){return(0,c.R1)(a).push("/help")})},"-安卓用户请下载App免费观看-")):(0,u.Q3)("",!0),ie]),(0,u.Lk)("div",
+fe.value?((0,u.uX)(),(0,u.CE)("div",te,[ne,(0,u.bF)(h.A,{margin:10,class:"qrcodeimg",text:fe.value},null,8,["text"])])):(0,u.Q3)("",!0)])):(0,u.Q3)("",!0),v.value?((0,u.uX)(),(0,u.CE)("p",ae,"苹果用户请用safari 苹果自带浏览器打开下载页面")):(0,u.Q3)("",!0),d.value?((0,u.uX)(),(0,u.CE)("p",re,"由于涉及成人视频,手机厂商会安装提示病毒")):(0,u.Q3)("",!0),d.value?((0,u.uX)(),(0,u.CE)("p",oe,"lulu色视频零权限隐私申请获取,完全放心体验")):(0,u.Q3)("",!0),d.value?((0,u.uX)(),(0,u.CE)("a",{key:8,class:"a2",onClick:t[9]||(t[9]=function(e){return(0,c.R1)(a).push("/help")})},"-不要用移动网络访问本站，点击进入APP安装指引-")):(0,u.Q3)("",!0),ie]),(0,u.Lk)("div",
 {class:"chat"},[(0,u.Lk)("div",
 {class:"flexdiv",onClick:we},le)])])),g.value?((0,u.uX)(),(0,u.CE)("div",ve,[(0,u.Lk)("div",
 {class:"popBox-mask",onClick:t[10]||(t[10]=function(e){return g.value=!1})}),(0,u.Lk)("div",
