@@ -1,9 +1,3 @@
-/*-------------------
-*Description:        By www.yiwuku.com
-*Website:            https://app.zblogcn.com/?auth=3ec7ee20-80f2-498a-a5dd-fda19b198194
-*Author:             尔今 erx@qq.com
-*update:             2017-08-12(Last:2024-03-28)
--------------------*/
 
 (function(){
 	//erx:加载DOM
