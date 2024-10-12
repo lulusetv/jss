@@ -259,11 +259,7 @@ var translate = {
 		return "";
 	},
 	
-	/**
-	 * 获取当前页面采用的是什么语言
-	 * 返回值如 en、zh-CN、zh-TW （如果是第一次用，没有设置过，那么返回的是 translate.localLanguage 设置的值）		
-	 * * 已废弃，v1使用的
-	 */
+	
 	currentLanguage:function(){
 		//translate.check();
 		var cookieValue = translate.getCookie('googtrans');
@@ -274,12 +270,6 @@ var translate = {
 		}
 	},
 	
-	/**
-	 * 切换语言，比如切换为英语、法语
- 	 * @param languageName 要切换的语言语种。传入如 english
-	 * 				会自动根据传入的语言来判断使用哪种版本。比如传入 en、zh-CN 等，则会使用v1.x版本
-	 * 														传入 chinese_simplified 、english 等，则会使用 v2.x版本
-	 */
 	changeLanguage:function(languageName){
 		//判断使用的是否是v1.x
 		var v1 = ',en,de,hi,lt,hr,lv,ht,hu,zh-CN,hy,uk,mg,id,ur,mk,ml,mn,af,mr,uz,ms,el,mt,is,it,my,es,et,eu,ar,pt-PT,ja,ne,az,fa,ro,nl,en-GB,no,be,fi,ru,bg,fr,bs,sd,se,si,sk,sl,ga,sn,so,gd,ca,sq,sr,kk,st,km,kn,sv,ko,sw,gl,zh-TW,pt-BR,co,ta,gu,ky,cs,pa,te,tg,th,la,cy,pl,da,tr,';
@@ -336,40 +326,10 @@ var translate = {
 			console.log('\r\n---WARNING----\r\ntranslate.js 主动翻译组件自检异常，当前协议是file协议，翻译组件要在正常的线上http、https协议下才能正常使用翻译功能\r\n------------');
 		}
 	},
-	
-	
-	/**************************** v2.0 */
-	to:'', //翻译为的目标语言，如 english 、chinese_simplified
-	//用户第一次打开网页时，自动判断当前用户所在国家使用的是哪种语言，来自动进行切换为用户所在国家的语种。
-	//如果使用后，第二次在用，那就优先以用户所选择的为主，这个就不管用了
-	//默认是false，不使用，可设置true：使用
-	//使用 setAutoDiscriminateLocalLanguage 进行设置
-	autoDiscriminateLocalLanguage: true,
+	to:'', 
+	autoDiscriminateLocalLanguage: false,
 	documents:[], //指定要翻译的元素的集合,可设置多个，如设置： document.getElementsByTagName('DIV')
-	/*
-		v2.11.5增加
-		正在进行翻译的节点，会记录到此处。
-		这里是最底的节点了，不会再有下级了。这也就是翻译的最终节点，也就是 translate.element.findNode() 发现的节点
-		也就是扫描到要进行翻译的节点，在翻译前，加入到这里，在这个节点翻译结束后，将这里面记录的节点删掉。
-		
-		格式如 
-			[
-				{
-					node: node节点的对象
-					number: 2 (当前正在翻译进行中的次数，比如一个节点有中英文混合的文本，那么中文、英文 会同时进行两次翻译，也就是最后要进行两次替换，会导致这个node产生两次改动。每次便是+1、-1)
-				},
-				{
-					......
-				}
-			]
-
-		生命周期：
-		
-		translate.execute() 执行后，会扫描要翻译的字符，扫描完成后首先会判断缓存中是否有，是否会命中缓存，如果缓存中有，那么在加入 task.add 之前就会将这个进行记录 ++ 
-		在浏览器缓存没有命中后，则会通过网络api请求进行翻译，此时在发起网络请求前，会进行记录 ++
-		当使用 translate.listener.start() 后，网页中动态渲染的部分会触发监听，触发监听后首先会判断这个节点是否存在于这里面正在被翻译，如果存在里面，那么忽略， 如果不存在里面，那么再进行 translate.execute(变动的节点) 进行翻译 （当然执行这个翻译后，自然也就又把它加入到此处进行记录 ++）
-		【唯一的减去操作】 在task.execute() 中，翻译完成并且渲染到页面执行完成后，会触发延迟50毫秒后将这个翻译的节点从这里减去
-	*/
+	
 	inProgressNodes:[], 
 	//翻译时忽略的一些东西，比如忽略某个tag、某个class等
 	ignore:{
@@ -1225,19 +1185,7 @@ var translate = {
 
 		//每次执行execute，都会生成一个唯一uuid，也可以叫做队列的唯一标识，每一次执行execute都会创建一个独立的翻译执行队列
 		var uuid = translate.util.uuid();
-		//console.log('=====')
-		//console.log(translate.nodeQueue);
 		
-		/* v2.4.3 将初始化放到了 translate.element.whileNodes 中，如果uuid对应的没有，则自动创建
-
-		translate.nodeQueue[uuid] = new Array(); //创建
-		translate.nodeQueue[uuid]['expireTime'] = Date.now() + 120*1000; //删除时间，10分钟后删除
-		translate.nodeQueue[uuid]['list'] = new Array(); 
-		*/
-		//console.log(translate.nodeQueue);
-		//console.log('=====end')
-		
-		//如果页面打开第一次使用，先判断缓存中有没有上次使用的语种，从缓存中取出
 		if(translate.to == null || translate.to == ''){
 			var to_storage = translate.storage.get('to');
 			if(to_storage != null && typeof(to_storage) != 'undefined' && to_storage.length > 0){
@@ -1549,18 +1497,7 @@ var translate = {
 					continue;	//跳出，不用在传入下面的翻译接口了
 				}
 				
-				/*
-				//取出数组
-				var queueNodes = this.nodeQueue[lang][hash];
-				if(queueNodes.length > 0){
-					//因为在这个数组中的值都是一样的，那么只需要取出第一个就行了
-					var valueStr = queueNodes[0].nodeValue;
-					valueStr = this.util.charReplace(valueStr);
-
-					translateTextArray[lang].push(valueStr);
-					translateHashArray[lang].push(hash);
-				}
-				*/
+				
 				
 				//加入待翻译数组
 				translateTextArray[lang].push(translateText);
@@ -1671,24 +1608,8 @@ var translate = {
 		}
 		
 
-		/******* 用以记录当前是否进行完第一次翻译了 *******/
-		/*
-		if(!translate.listener.isExecuteFinish){
-			translate.temp_executeFinishNumber = 0;	//下面请求接口渲染，翻译执行完成的次数	
-			//判断是否是执行完一次了
-	        translate.temp_executeFinishInterval = setInterval(function(){
-				if(translate.temp_executeFinishNumber == fanyiLangs.length){
-					translate.listener.isExecuteFinish = true; //记录当前已执行完第一次了
-					clearInterval(translate.temp_executeFinishInterval);//停止
-					console.log('translate.execute() Finish!');
-					//console.log(uuid);
-					
-				}
-	        }, 50);
-		}
-		*/
 
-		//console.log(translate.nodeQueue[uuid]['list'])
+		
 		if(fanyiLangs.length == 0){
 			//没有需要翻译的，直接退出
 			return;
@@ -2605,11 +2526,7 @@ var translate = {
 			}
 			return translate.language.local;
 		},
-		/*
-			获取当前语种。
-			比如当前设置的本地语种是简体中文，用户并未切换其他语种，那么这个方法将返回本地当前的语种，也就是等同于 translate.language.getLocal()
-			如果用户切换为英语进行浏览，那么这个方法将返回翻译的目标语种，也就是 english
-		*/
+		
 		getCurrent:function(){
 			var to_storage = translate.storage.get('to');
 			if(to_storage != null && typeof(to_storage) != 'undefined' && to_storage.length > 0){
@@ -2676,57 +2593,10 @@ var translate = {
 			var recognition = translate.language.recognition(bodyText);
 			translate.language.local = recognition.languageName;
 			return translate.language.local;
-			/* v3.1优化
-			var langs = new Array(); //上一个字符的语种是什么，当前字符向上数第一个字符。格式如 ['language']='english', ['chatstr']='a', ['storage_language']='english'  这里面有3个参数，分别代表这个字符属于那个语种，其字符是什么、存入了哪种语种的队列。因为像是逗号，句号，一般是存入本身语种中，而不是存入特殊符号中。 
-			for(var i=0; i<bodyText.length; i++){
-				var charstr = bodyText.charAt(i);
-				var lang = translate.language.getCharLanguage(charstr);
-				if(lang == ''){
-					//未获取到，未发现是什么语言
-					//continue;
-					lang = 'unidentification';
-				}
-				langs.push(lang);
-			}
-
-			//从数组中取出现频率最高的
-			var newLangs = translate.util.arrayFindMaxNumber(langs);
-
-			//移除数组中的特殊字符
-			var index = newLangs.indexOf('specialCharacter');
-			if(index > -1){
-				newLangs.splice(index,1); //移除数组中的特殊字符
-			}
-
-			if(newLangs.length > 0){
-				//找到排序出现频率最多的
-				translate.language.local = newLangs[0];
-			}else{
-				//没有，默认赋予简体中文
-				translate.language.local = 'chinese_simplified';
-			}
-			*/
+			
 		},
 		
-		/*
-		 * 获取当前字符是什么语种。返回值是一个语言标识，有  chinese_simplified简体中文、japanese日语、korean韩语、
-		 * str : node.nodeValue 或 图片的 node.alt 等
-		 * 如果语句长，会全句翻译，以保证翻译的准确性，提高可读性。
-		 * 如果语句短，会自动将特殊字符、要翻译的目标语种给过滤掉，只取出具体的要翻译的目标语种文本
-		 *
-		 * 返回 存放不同语言的数组，格式如
-		 *  	[
-					"english":[
-						{beforeText: '', afterText: '', text: 'emoambue hag'},
-						......
-					],
-					"japanese":[
-						{beforeText: ' ', afterText: ' ', text: 'ẽ '},
-						......
-					]
-		 		]
-		 * 		
-		 */
+	
 		get:function(str){
 			//将str拆分为单个char进行判断
 
@@ -2967,111 +2837,22 @@ var translate = {
 			return '';
 			
 		},
-		/*
-		 * 对字符串进行分析，分析字符串是有哪几种语言组成。
-		 * language : 当前字符的语种，传入如 english
-		 * langStrs : 操作的，如 langStrs['english'][0] = '你好'
-		 * upLangs  : 当前字符之前的上一个字符的语种是什么，当前字符向上数第一个字符。格式如 ['language']='english', ['chatstr']='a', ['storage_language']='english'  这里面有3个参数，分别代表这个字符属于那个语种，其字符是什么、存入了哪种语种的队列。因为像是逗号，句号，一般是存入本身语种中，而不是存入特殊符号中。
-		 * upLangsTwo : 当前字符之前的上二个字符的语种是什么 ，当前字符向上数第二个字符。 格式如 ['language']='english', ['chatstr']='a', ['storage_language']='english'  这里面有3个参数，分别代表这个字符属于那个语种，其字符是什么、存入了哪种语种的队列。因为像是逗号，句号，一般是存入本身语种中，而不是存入特殊符号中。
-		 * chatstr  : 当前字符，如  h
-		 */
+		
 		analyse:function(language, langStrs, upLangs, upLangsTwo, charstr){
 			if(typeof(langStrs[language]) == 'undefined'){
 				langStrs[language] = new Array();
 			}
 			var index = 0; //当前要存入的数组下标
 			if(typeof(upLangs['storage_language']) == 'undefined'){
-				//第一次，那么还没存入值，index肯定为0
-				//console.log('第一次，那么还没存入值，index肯定为0')
-				//console.log(upLangs['language'])
+				
 			}else{
-				//console.log('analyse, charstr : '+charstr+', upLangs :');
-				//console.log(upLangs);
-				//var isEqual = upLangs['storage_language'] == language; //上次跟当前字符是否都是同一个语种（这个字符跟这个字符前一个字符）
 
-				/*
-					英语每个单词之间都会有空格分割. 如果是英文的话，英文跟特殊字符还要单独判断一下，避免拆开，造成翻译不准，单个单词翻译的情况
-					所以如果上次的字符是英文或特殊符号，当前字符是特殊符号(逗号、句号、空格，然后直接笼统就吧特殊符号都算上吧)，那么也将当次的特殊符号变为英文来进行适配
-					示例  
-						hello word  的 "o w"
-						hello  word  的 "  w"
-						hello  word  的 "w  "
-						this is a dog  的 " a "
-				*/
-				//console.log(language == 'specialCharacter');
-				//如果两个字符类型不一致，但当前字符是英文或连接符时，进行判断
-				/*
-				if(!isEqual){
-					if(language == 'english' || translate.language.connector(charstr)){
-						console.log('1.'+(language == 'english' || translate.language.connector(charstr))+', upLangs str:'+upLangs['charstr']);
-						//上一个字符是英文或连接符
-						//console.log('teshu:'+translate.language.connector(upLangs['charstr'])+', str:'+upLangs['charstr']);
-						if(upLangs['language'] == 'english' || translate.language.connector(upLangs['charstr'])) {
-							console.log('2');
-							//如果上二个字符不存在，那么刚开始，不再上面几种情况之中，直接不用考虑
-							if(typeof(upLangsTwo['language']) != 'undefined'){
-								console.log('3')
-								//上二个字符是空（字符串刚开始），或者是英文
-								if(upLangsTwo['language'] == 'english' || translate.language.connector(upLangsTwo['charstr'])){
-									//满足这三个条件，那就将这三个拼接到一起
-									console.log('4/5: '+', two lang:'+upLangsTwo['language']+', str:'+upLangsTwo['charstr'])
-									isEqual = true;
-									if(language == 'specialCharacter' && upLangs['language'] == 'specialCharacter' && upLangsTwo['language'] == 'specialCharacter'){
-										//如果三个都是特殊字符，或后两个是特殊字符，第一个是空（刚开始），那就归入特殊字符
-										language = 'specialCharacter';
-										//console.log('4')
-									}else{
-										//不然就都归于英文中。
-										//这里更改是为了让下面能将特殊字符（像是空格逗号等）也一起存入数组
-										language = 'english';
-										console.log(5)
-									}
-								}
-							}
-						}
-					}
-				}
-				*/
-
-				/*
-					不判断当前字符，而判断上个字符，是因为当前字符没法获取未知的下个字符。
-				*/
-				//if(!isEqual){
-
-					//如果当前字符是连接符
 					if(translate.language.connector(charstr)){
 						language = upLangs['storage_language'];
-						/*
-						//判断上个字符是否存入了待翻译字符，如要将中文翻译为英文，而上个字符是中文，待翻译，那将连接符一并加入待翻译字符中去，保持句子完整性
-						//判断依据是上个字符存储至的翻译字符语种序列，不是特殊字符，而且也不是要翻译的目标语种，那肯定就是待翻译的，将连接符加入待翻译中一起进行翻译
-						if(upLangs['storage_language'] != 'specialCharacter' && upLangs['storage_language'] != translate.to){
-							
-							language = upLangs['storage_language'];
-							console.log('teshu:'+charstr+', 当前字符并入上个字符存储翻译语种:'+upLangs['storage_language']);
-						}
-						*/
+						
 					}
-				//}
-
-				//console.log('isEqual:'+isEqual);
-				/*
-				if(isEqual){
-					//跟上次语言一样，那么直接拼接
-					index = langStrs[language].length-1; 
-					//但是还有别的特殊情况，v2.1针对英文翻译准确度的适配，会有特殊字符的问题
-					if(typeof(upLangs['storage_language']) != 'undefined' && upLangs['storage_language'] != language){
-						//如果上个字符存入的翻译队列跟当前这个要存入的队列不一个的话，那应该是特殊字符像是逗号句号等导致的，那样还要额外一个数组，不能在存入之前的数组了
-						index = langStrs[language].length; 
-					}
-				}else{
-					//console.log('新开');
-					//当前字符跟上次语言不样，那么新开一个数组
-					index = langStrs[language].length;
-					//console.log('++, inde:'+index+',lang:'+language+', length:'+langStrs[language].length)
-				}
-				*/
-
-				//当前要翻译的语种跟上个字符要翻译的语种一样，那么直接拼接
+				
+				
 				if(upLangs['storage_language'] == language){
 					index = langStrs[language].length-1; 
 				}else{
@@ -3087,12 +2868,7 @@ var translate = {
 				langStrs[language][index]['text'] = '';
 			}
 			langStrs[language][index]['text'] = langStrs[language][index]['text'] + charstr;
-			/*
-				中文英文混合时，当中文+英文并没有空格间隔，翻译为英文时，会使中文翻译英文的结果跟原本的英文单词连到一块。这里就是解决这种情况
-				针对当前非英文(不需要空格分隔符，像是中文、韩语)，但要翻译为英文（需要空格作为分割符号，像是法语等）时的情况进行判断
-			*/
-			//if(translate.language.getLocal() != 'english' && translate.to == 'english'){
-			//当前本地语种的语言是连续的，但翻译的目标语言不是连续的（空格间隔）
+			
 			if( translate.language.wordBlankConnector(translate.language.getLocal()) == false && translate.language.wordBlankConnector(translate.to)){	
 				if((upLangs['storage_language'] != null && typeof(upLangs['storage_language']) != 'undefined' && upLangs['storage_language'].length > 0)){
 					//上个字符存在
@@ -3125,18 +2901,9 @@ var translate = {
 			return result;
 		},
 		
-		/*
-		 * 不同于语言，这个只是单纯的连接符。比如英文单词之间有逗号、句号、空格， 汉字之间有逗号句号书名号的。避免一行完整的句子被分割，导致翻译不准确
-		 * 单独拿他出来，目的是为了更好的判断计算，提高翻译的准确率
-		 */
+		
 		connector:function(str){
 			
-			/*
-				通用的有 空格、阿拉伯数字
-				1.不间断空格\u00A0,主要用在office中,让一个单词在结尾处不会换行显示,快捷键ctrl+shift+space ;
-				2.半角空格(英文符号)\u0020,代码中常用的;
-				3.全角空格(中文符号)\u3000,中文文章中使用; 
-			*/	
 			if(/.*[\u0020\u00A0\u202F\u205F\u3000]+.*$/.test(str)){
 				return true;
 			}
@@ -4250,48 +4017,12 @@ var translate = {
 			//console.log('response------');
 			//console.log(xhr);
 		},
-		/*
-			速度检测控制中心， 检测主备翻译接口的响应速度进行排列，真正请求时，按照排列的顺序进行请求
-			v2.8.2增加	
-			
-			storage存储方面
-			storage存储的key  						存的什么
-			speedDetectionControl_hostQueue			hostQueue
-			speedDetectionControl_hostQueueIndex	当前要使用的是 hostQueue 中的数组下标。如果没有，这里默认视为0
-			speedDetectionControl_lasttime			最后一次执行速度检测的时间戳，13位时间戳
-
-
-			
-		*/
+		
 		speedDetectionControl:{
-			/*
-				
-				进行 connect主节点缩减的时间，单位是毫秒.
-				这个是进行 translate.request.speedDetectionControl.checkResponseSpeed() 节点测速时，translate.request.api.host 第一个元素是默认的主节点。
-				主节点在实际测速完后，会减去一定的时间，以便让用户大部分时间可以使用主节点，而不必走分节点。
-				例如主节点实际响应速度 3500 毫秒，那么会减去这里设置的2000毫秒，记为 1500 毫秒
-				当然如果是小于这里设置的2000毫秒，那么会记为0毫秒。
-				这样再跟其他分节点的响应时间进行对比，主节点只要不是响应超时，就会有更大的几率被选中为实际使用的翻译的节点
-				
-				这里的单位是毫秒。
-				v2.10.2.20231225 增加
-			*/
+			
 			hostMasterNodeCutTime:2000,	
 
-			/*
-				翻译的队列，这是根据网络相应的速度排列的，0下标为请求最快，1次之...
-				其格式为：
-					[
-						{
-							"host":"xxxxxxxx",
-							"time":123 			//这里的单位是毫秒
-						},
-						{
-							"host":"xxxxxxxx",
-							"time":123 			//这里的单位是毫秒
-						}
-					]
-			*/
+			
 			hostQueue:[],	
 			hostQueueIndex:-1,	//当前使用的 hostQueue的数组下标，  -1表示还未初始化赋予值，不可直接使用，通过 getHostQueueIndex() 使用
 			disableTime:1000000,	//不可用的时间，storage中存储的 speedDetectionControl_hostQueue 其中 time 这里，如果值是 这个，便是代表这个host处于不可用状态
@@ -4647,26 +4378,7 @@ var translate = {
 			}
 			return xhr;
 		},
-		/*
-
-			手动进行翻译操作。参数说明：
-				texts: 可传入要翻译的文本、以及文本数组。 比如要一次翻译多个句子，那就可以传入数组的方式
-				function: 翻译完毕后的处理函数。传入如 function(data){ console.log(data); }
-						  注意，返回的data.result 为 1，则是翻译成功。  为0则是出错，可通过data.info 得到错误原因。 更详细说明参考： http://api.zvo.cn/translate/service/20230807/translate.json.html
-
-			使用案例一： 
-			translate.request.translateText('你好，我是翻译的内容', function(data){
-				//打印翻译结果
-				console.log(data);
-			});
-			
-			使用案例二：
-			var texts = ['我是翻译的第一句','我是翻译的第二句','我是翻译的第三句'];
-			translate.request.translateText(texts, function(data){
-				//打印翻译结果
-				console.log(data);
-			});
-		*/
+		
 		translateText:function(texts, func){
 			if(typeof(texts) == 'string'){
 				texts = [texts];
@@ -4697,21 +4409,11 @@ var translate = {
 		listener:{
 			minIntervalTime:800, // 两次触发的最小间隔时间，单位是毫秒，这里默认是800毫秒。最小填写时间为 200毫秒
 			lasttime:0,// 最后一次触发执行 translate.execute() 的时间，进行执行的那一刻，而不是执行完。13位时间戳
-			/*
-				设置要在未来的某一时刻执行，单位是毫秒，13位时间戳。
-				执行时如果当前时间大于这个数，则执行，并且将这个数置为0。
-				会有一个循环执行函数每间隔200毫秒触发一次
-			*/
+			
 			executetime:0,
-			/*
-				进行翻译时，延迟翻译执行的时间
-				当ajax请求结束后，延迟这里设置的时间，然后自动触发 translate.execute() 执行
-			*/
+			
 			delayExecuteTime:200, 
-			/*
-				满足ajax出发条件，设置要执行翻译。
-				注意，设置这个后并不是立马就会执行，而是加入了一个执行队列，避免1秒请求了10次会触发10次执行的情况
-			*/
+			
 			addExecute:function(){
 				var currentTime = Date.now();
 				if(translate.request.listener.lasttime == 0){
@@ -5154,12 +4856,7 @@ var translate = {
 
 	
 }
-/*
-	将页面中的所有node节点，生成其在当前页面的唯一标识字符串uuid
-	开源仓库： https://github.com/xnx3/nodeuuid.js
-	原理： 当前节点的nodeName + 当前节点在父节点下，属于第几个 tagName ，然后追个向父级进行取，将node本身+父级+父父级+.... 拼接在一起
-	注意，如果动态添加一个节点到第一个，那么其他节点就会挤下去导致节点标记异常
-*/
+
 var nodeuuid = {
 	index:function(node){
 		var parent = node.parentNode;
