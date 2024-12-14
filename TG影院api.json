@@ -1,0 +1,31 @@
+{
+    "spider": "",
+    "wallpaper": "",
+    "sites": [
+     {
+            "key": "Cinema",
+            "name": "TG影院TV",
+            "type": 0,
+            "api": "https://nxxy.cc/cjapi/mc/vod/xml.html",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "categories": [
+                "电影",
+                "4K高清",
+                "电视剧",
+                "动漫",
+                "综艺",
+            ]
+        }
+    ],
+    "logo": "//www.baidu.com/img/flexible/logo/pc/peak-result.png",
+    "lives": [
+        {
+            "name": "TG影院直播",
+            "type": 0,
+            "url": "http://m3u.ibert.me/txt/fmml_ipv6.txt",
+            "playerType": 1
+        }
+    ]
+}
