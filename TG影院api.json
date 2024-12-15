@@ -8,7 +8,24 @@
 			"urls": ["proxy://do=live&type=txt&ext=http://m3u.ibert.me/txt/fmml_ipv6.txt"]
 		}]
 	}],
-	"sites": [{
+	"sites": [
+		 {
+            "key": "Cinema",
+            "name": "TG影院TV",
+            "type": 0,
+            "api": "https://nxxy.cc/cjapi/mc/vod/xml.html",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "categories": [
+                "电影",
+                "4K高清",
+                "电视剧",
+                "动漫",
+                "综艺",
+            ]
+        },
+		{
 		"key": "南瓜",
 		"name": "南瓜┃TG影院",
 		"type": 3,
