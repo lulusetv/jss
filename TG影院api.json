@@ -10,7 +10,7 @@
 	}],
 	"sites": [
 		 {
-            "key": "Cinema",
+            "key": "TG影院TV",
             "name": "TG影院TV",
             "type": 0,
             "api": "https://nxxy.cc/cjapi/mc/vod/xml.html",
