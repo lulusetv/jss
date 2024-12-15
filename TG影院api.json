@@ -9,22 +9,22 @@
 		}]
 	}],
 	"sites": [
-		 {
-            "key": "TG影院TV",
-            "name": "TG影院TV",
-            "type": 0,
-            "api": "https://nxxy.cc/cjapi/mc/vod/xml.html",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "categories": [
-                "电影",
+
+
+        {"key": "TG影院TV",
+		"name": "TG影院TV",
+		"type": 0,
+		"api": "https://nxxy.cc/cjapi/mc/vod/xml.html",
+		"playUrl": " ",
+		"categories": [ 
+		"电影",
                 "4K高清",
                 "电视剧",
                 "动漫",
                 "综艺",
-            ]
-        },
+		
+		]
+	},
 		{
 		"key": "南瓜",
 		"name": "南瓜┃TG影院",
