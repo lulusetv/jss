@@ -9,9 +9,18 @@
 		}]
 	}],
 	"sites": [
-
-
-        {"key": "TG影院TV",
+		{
+		"key": "腾讯",
+		"name": "腾讯┃TG影院",
+		"type": 3,
+		"api": "csp_NanGua",
+		"searchable": 1,
+		"quickSearch": 1,
+		"playerType": 2,
+		"filterable": 1,
+		"ext": ""
+	},
+		  {"key": "TG影院TV",
 		"name": "TG影院TV",
 		"type": 0,
 		"api": "https://nxxy.cc/cjapi/mc/vod/xml.html",
@@ -25,116 +34,105 @@
 		
 		]
 	},
-		{
-		"key": "南瓜",
-		"name": "南瓜┃TG影院",
-		"type": 3,
-		"api": "csp_NanGua",
-		"searchable": 1,
-		"quickSearch": 1,
-		"playerType": 2,
-		"filterable": 1,
-		"ext": ""
-	},
 	{
-		"key": "天天",
-		"name": "天天┃TG影院",
+		"key": "爱奇艺",
+		"name": "爱奇艺┃TG影院",
 		"type": 3,
 		"api": "csp_TTian",
 		"playerType": 1,
 		"ext": "baHR0cDovL3R0LnlzZHFqcy5jbg=="
 	},
 	{
-		"key": "热播",
-		"name": "热播┃TG影院",
+		"key": "豆瓣热播",
+		"name": "豆瓣热播┃TG影院",
 		"type": 3,
 		"api": "csp_TTian",
 		"playerType": 1,
 		"ext": "caHR0cDovL3YucmJvdHYuY24="
 	},
 	{
-		"key": "追剧",
-		"name": "追剧┃TG影院",
+		"key": "乐视",
+		"name": "乐视┃TG影院",
 		"type": 3,
 		"api": "csp_TTian",
 		"playerType": 1,
 		"ext": "daHR0cDovL3YubGt1eXMuY24="
 	},
 	{
-		"key": "剧评",
-		"name": "剧评┃TG影院",
+		"key": "芒果",
+		"name": "芒果┃TG影院",
 		"type": 3,
 		"api": "csp_Jpys",
 		"playerType": 1,
 		"ext": "caHR0cHM6Ly93d3cuY2Zrajg2LmNvbQ=="
 	},
 	{
-		"key": "木头",
-		"name": "木头┃TG影院",
+		"key": "腾讯2",
+		"name": "腾讯2┃TG影院",
 		"type": 3,
 		"api": "csp_Shark",
 		"playerType": 1,
 		"ext": "saHR0cDovL21pdG8ubWlub3R2LmNuL3xhYXNzZGR3d3h4bGxzeDF4fGJic3NxZGJic3NsbDI1c3g="
 	},
 	{
-		"key": "小飞",
-		"name": "小飞┃TG影院",
+		"key": "爱奇艺2",
+		"name": "爱奇艺2┃TG影院",
 		"type": 3,
 		"api": "csp_Shark",
 		"playerType": 1,
 		"ext": "saHR0cDovL3hpYWZhbi56aHVpanU2NjYuY29tfGFhc3NkZHd3eHhsbHN4MXh8YmJzc3FkYmJzc2xsMjVzeA=="
 	},
 	{
-		"key": "雨滴",
-		"name": "雨滴┃TG影院",
+		"key": "优酷2",
+		"name": "优酷2┃TG影院",
 		"type": 3,
 		"api": "csp_Xdai",
 		"playerType": 1,
 		"ext": "jaHR0cDovL2M4dzJvdjd1NXdnMnoxbzhwMjFjLmFsaXl1bmNzLmNsaWNrfGs5bzNwMmM4YjdtM3owbzh8azlvM3AyYzhiN20zejBvOHwxMDA="
 	},
 	{
-		"key": "现代",
-		"name": "现代┃TG影院",
+		"key": "乐视2",
+		"name": "乐视2┃TG影院",
 		"type": 3,
 		"api": "csp_Xdai",
 		"playerType": 1,
 		"ext": "caHR0cHM6Ly9hcHAuYnJvdm9kLmNvbXx4ZHlzLnZpcHhkeXMudmlwfHhkeXMudmlweGR5cy52aXB8MTEz"
 	},
 	{
-		"key": "优质",
-		"name": "优质┃TG影院",
+		"key": "优酷3",
+		"name": "优酷3┃TG影院",
 		"type": 3,
 		"api": "csp_Xdai",
 		"playerType": 1,
 		"ext": "jaHR0cHM6Ly9hcGlhcHBkeXl6dHZ5eWRzcXdkeS42OC5neTo1Njg5fGR5eXp0dmFwaWFwcHl5ZHN8ZHl5enR2YXBpYXBweXlkc3wxMDA="
 	},
 	{
-		"key": "客星",
-		"name": "客星┃TG影院",
+		"key": "乐视3",
+		"name": "乐视3┃TG影院",
 		"type": 3,
 		"api": "csp_Xdai",
 		"playerType": 1,
 		"ext": "caHR0cDovL2t4eXMua2FpeGlubWFuaHVhLnRvcHw1ODliMTkwNmI5NWY3MTljfDU4OWIxOTA2Yjk1ZjcxOWN8MTAw"
 	},
 	{
-		"key": "木叶",
-		"name": "木叶┃TG影院",
+		"key": "腾讯3",
+		"name": "腾讯3┃TG影院",
 		"type": 3,
 		"api": "csp_Xdai",
 		"playerType": 2,
 		"ext": "saHR0cDovLzEyNC4yMjMuMTEuMjU6MjQxMDJ8NnZheGpuNHZia3Joc3pwOHw2dmF4am40dmJrcmhzenA4fDEwMA=="
 	},
 	{
-		"key": "雷电",
-		"name": "雷电┃TG影院",
+		"key": "芒果2",
+		"name": "芒果2┃TG影院",
 		"type": 3,
 		"api": "csp_Slys",
 		"playerType": 1,
 		"ext": "caHR0cDovLzEyMC4yMjQuNy45MDo4MDg="
 	},
 	{
-		"key": "柠檬",
-		"name": "柠檬┃TG影院",
+		"key": "芒果3",
+		"name": "芒果3┃TG影院",
 		"type": 3,
 		"api": "csp_Nmvod",
 		"playerType": 2,
@@ -175,13 +173,13 @@
 	},
 	{
 		"key": "Dygang",
-		"name": "电影港",
+		"name": "好莱坞",
 		"type": 3,
 		"api": "csp_Dygang"
 	},
 	{
-		"key": "蚂蚁",
-		"name": "蚂蚁┃TG影院",
+		"key": "好莱坞2",
+		"name": "好莱坞2┃TG影院",
 		"type": 3,
 		"api": "csp_Mayiys",
 		"searchable": 1,
@@ -244,7 +242,7 @@
 	},
 	{
 		"key": "csp_CZSPP",
-		"name": "厂长┃直连",
+		"name": "好莱坞3┃直连",
 		"type": 3,
 		"api": "csp_Czsapp",
 		"searchable": 1,
