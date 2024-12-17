@@ -15,7 +15,8 @@
 		"type": 0,
 		"api": "https://api.zuiseapi.com/api.php/provide/vod/at/xml/",
 		"playUrl": " ",
-		"categories": ["极品学妹",
+		"categories": [
+"极品学妹",
 "网曝黑料",
 "热门事件",
 "日本有码",
@@ -36,24 +37,9 @@
 "日本有码",
 "野战车震",
 "欧美精品",
-"国产视频",]
+"国产视频"]
 	},
-	{
-		"key": "爱奇艺",
-		"name": "爱奇艺┃TG影院",
-		"type": 3,
-		"api": "csp_TTian",
-		"playerType": 1,
-		"ext": "baHR0cDovL3R0LnlzZHFqcy5jbg=="
-	},
-	{
-		"key": "豆瓣热播",
-		"name": "豆瓣热播┃TG影院",
-		"type": 3,
-		"api": "csp_TTian",
-		"playerType": 1,
-		"ext": "caHR0cDovL3YucmJvdHYuY24="
-	},
+	
 {
 		"key": "push_agent",
 		"name": "推送",
