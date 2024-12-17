@@ -9,8 +9,8 @@
 		}]
 	}],
 	"sites": [
-		
-		  {"key": "最色TV",
+		{
+"key": "最色TV",
 		"name": "最色😍TV",
 		"type": 0,
 		"api": "https://api.zuiseapi.com/api.php/provide/vod/at/xml/",
