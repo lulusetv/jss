@@ -14,7 +14,7 @@
 		"name": "最色😍TV",
 		"type": 0,
 		"api": "https://api.zuiseapi.com/api.php/provide/vod/at/xml/",
-		"playerType": 1,
+		"playerType": 2,
 		"categories": [
 "极品学妹",
 "网曝黑料",
@@ -44,7 +44,7 @@
 		"name": "🔥GAY福利TV",
 		"type": 0,
 		"api": "https://gayapi.com/api.php/provide/vod/from/gaym3u8/at/xml",
-		"playerType": 1,
+		"playerType": 2,
 		"categories": [
 "网曝黑料",
 "欧美无码",
@@ -93,13 +93,29 @@
 	},
 
 
-    {"name": "极速播放","type": 1, "url": "https://zy.qiaoji8.com/neibu.php?url=","ext": {"flag": ["qq","腾讯","qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩"],"header":{"User-Agent":"okhttp/4.1.0"}}},
+    {
+"name": "极速播放",
+"type": 1, 
+"url": "https://zy.qiaoji8.com/neibu.php?url=",
+"ext": {
+"flag": ["qq","腾讯","qiyi", "爱奇艺", "奇艺", "youku", "优酷", "mgtv", "芒果", "letv", "乐视", "pptv", "PPTV", "sohu", "bilibili", "哔哩哔哩", "哔哩","gaym3u8","dplayer"],
+"header":{
+"User-Agent":"okhttp/4.1.0"
+     }
+   }
+},
 
-    {"name":"极速播放二","type":1,"url":"https://zy.qiaoji8.com/gouzi.php?url=","ext":{"flags":["youku","qq","iqiyi","qiyi","letv","sohu","tudou","pptv","mgtv","wasu","bilibili","renrenmi","gaym3u8","dplayer"]
+    {
+"name":"极速播放二",
+"type":1,"url":"https://zy.qiaoji8.com/gouzi.php?url=",
+"ext":{
+"flags":["youku","qq","iqiyi","qiyi","letv","sohu","tudou","pptv","mgtv","wasu","bilibili","renrenmi"]
 
-}}],
+    }
+  }  
+],
 	"flags": ["youku", "qq", "QQ", "iqiyi", "qiyi", "letv", "sohu", "pptv", "PPTV", "mgtv", "wasu", "bilibili", "m1905", "seven", "m78"],
-	"ijk": [{
+	"exo": [{
 		"group": "软解码",
 		"options": [{
 			"category": 4,
