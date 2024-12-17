@@ -91,7 +91,7 @@
         //{"name":"19JTV聚合","type":3,"url":"web"},
 
 {"name":"Json轮询","type":1,"url":"Sequence"},
-        {"name":"-极速播放-","type":0,"url":"https://jx.xyflv.cc/?url=","ext":{"header":{"user-agent":"Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36","referer":"https://www.xyflv.cc/"}}},
+        {"name":"-极速播放-","type":1,"url":"https://jx.xyflv.cc/?url=","ext":{"header":{"user-agent":"Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36","referer":"https://www.xyflv.cc/"}}},
         {"name":"-极速播放二-","type":1,"url":"https://jx.xmflv.com/?url=","ext":{
 "header":{"user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57"}}},
         {"name":"-极速播放三-","type":1,"url":"https://jx.zhanlangbu.com/?url=",
@@ -219,7 +219,7 @@
     },
         {"name":"磁力广告","hosts":["magnet"],"regex":["更多","社 區","x u u","最 新","更 新","社 区","有趣","有 趣","英皇体育","全中文AV在线","澳门皇冠赌场","哥哥快来","美女荷官","裸聊","新片首发","UUE29"]}],
     
-"阿里": [{
+"exo": [{
 		"group": "软解码",
 		"options": [{
 			"category": 4,
