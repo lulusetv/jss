@@ -14,7 +14,7 @@
 		"name": "最色😍TV",
 		"type": 0,
 		"api": "https://api.zuiseapi.com/api.php/provide/vod/at/xml/",
-		"playUrl": " ",
+		"playerType": 1,
 		"categories": [
 "极品学妹",
 "网曝黑料",
@@ -44,7 +44,7 @@
 		"name": "🔥GAY福利TV",
 		"type": 0,
 		"api": "https://gayapi.com/api.php/provide/vod/from/gaym3u8/at/xml",
-		"playUrl": " ",
+		"playerType": 1,
 		"categories": [
 "网曝黑料",
 "欧美无码",
