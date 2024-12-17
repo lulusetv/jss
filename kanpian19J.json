@@ -15,29 +15,8 @@
 		"type": 0,
 "playerType": 1,
 		"api": "https://api.zuiseapi.com/api.php/provide/vod/at/xml/",
-		"categories": [
-"极品学妹",
-"网曝黑料",
-"热门事件",
-"日本有码",
-"日韩无码",
-"中文字幕",
-"日韩精品",
-"约炮探花",
-"制服诱惑",
-"强奸乱伦!",
-"偷拍自拍",
-"3P合辑",
-"巨乳系列",
-"口交视频",
-"SM重味",
-"教师学生",
-"91大神",
-"国产主播",
-"日本有码",
-"野战车震",
-"欧美精品",
-"国产视频",
+		"categories": ["极品学妹","网曝黑料","热门事件","日本有码","日韩无码","中文字幕",
+"日韩精品","约炮探花","制服诱惑","强奸乱伦!","偷拍自拍","3P合辑","巨乳系列","口交视频","SM重味","教师学生","91大神","国产主播","日本有码","野战车震","欧美精品","国产视频",
 ]},
 	{
 "key": "GAY福利TV",
@@ -81,33 +60,40 @@
 	}
 ],
 
-"parses": [
-        //{"name":"Json并发","type":2,"url":"Parallel"},
-
-        //{"name":"Json轮询","type":2,"url":"Sequence"},
-
-        //{"name":"解析聚合","type":3,"url":"Demo"},
-
-        //{"name":"19JTV聚合","type":3,"url":"web"},
-
-{"name":"Json轮询","type":1,"url":"Sequence"},
-        {"name":"-极速播放-","type":1,"url":"https://jx.xyflv.cc/?url=","ext":{"header":{"user-agent":"Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36","referer":"https://www.xyflv.cc/"}}},
-        {"name":"-极速播放二-","type":1,"url":"https://jx.xmflv.com/?url=","ext":{
-"header":{"user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57"}}},
-        {"name":"-极速播放三-","type":1,"url":"https://jx.zhanlangbu.com/?url=",
-"ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩","gaym3u8","dplayer"],"ext":{"header":{"user-agent":"Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"}}}},
-        {"name":"-极速播放四-","type":1,"url":"https://jx.yparse.com/index.php?url=","ext":{"header":{"user-agent":"Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"}}},
-        {"name":"-极速播放五-","type":1,"url":"https://jx.jsonplayer.com/player/?url=","ext":{"header":{"user-agent":"Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"}}},
-        {"name":"-极速播放六-","type":1,"url":"https://www.kkvip2022.com/vip/jiexi1/?url=","ext":{"header":{"user-agent":"Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"}}},
-        {"name":"-极速播放七-","type":1,"url":"https://jx.quankan.app/?url=","ext":{"header":{"user-agent":"Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"}}},
-        {"name":"-极速播放八-","type":1,"url":"https://jx.aidouer.net/?url=","ext":{"header":{"user-agent":"Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36","referer":"https://jiejie.uk/"}}}
-        
-        
-    ],
-    "flags":["youku","qq","iqiyi","qiyi","letv","sohu","tudou","pptv","mgtv","wasu","bilibili","renrenmi","gaym3u8","dplayer"],
-   
-    
-"exo": [{
+"parses": [{
+		"name": "解析聚合",
+		"type": 3,
+		"url": "Demo"
+	},
+	{
+		"name": "Json轮询",
+		"type": 2,
+		"url": "Sequence"
+	},
+	{
+		"name": "极速播放",
+		"type": 1,
+		"url": "https://zy.qiaoji8.com/neibu.php?url=",
+		"ext": {
+			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905"],
+			"header": {
+				"User-Agent": "okhttp/4.9.1"
+			}
+		}
+	},
+	{
+		"name": "极速播放二",
+		"type": 1,
+		"url": "https://zy.qiaoji8.com/gouzi.php?url=",
+		"ext": {
+			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905", "NetFilx",gaym3u8],
+			"header": {
+				"User-Agent": "okhttp/4.9.1"
+			}
+		}
+	}],
+	"flags": ["youku", "qq", "QQ", "iqiyi", "qiyi", "letv", "sohu", "pptv", "PPTV", "mgtv", "wasu", "bilibili", "m1905", "seven", "m78"],
+	"exo": [{
 		"group": "软解码",
 		"options": [{
 			"category": 4,
@@ -263,6 +249,5 @@
 			"value": "600000000"
 		}]
 	}],
-
-    "ads":["mimg.0c1q0l.cn","www.googletagmanager.com","www.google-analytics.com","mc.usihnbcq.cn","mg.g1mm3d.cn","mscs.svaeuzh.cn","cnzz.hhttm.top","tp.vinuxhome.com","cnzz.mmstat.com","www.baihuillq.com","s23.cnzz.com","z3.cnzz.com","c.cnzz.com","stj.v1vo.top","z12.cnzz.com","img.mosflower.cn","tips.gamevvip.com","ehwe.yhdtns.com","xdn.cqqc3.com","www.jixunkyy.cn","sp.chemacid.cn","hm.baidu.com","s9.cnzz.com","z6.cnzz.com","um.cavuc.com","mav.mavuz.com","wofwk.aoidf3.com","z5.cnzz.com","xc.hubeijieshikj.cn","tj.tianwenhu.com","xg.gars57.cn","k.jinxiuzhilv.com","cdn.bootcss.com","ppl.xunzhuo123.com","xomk.jiangjunmh.top","img.xunzhuo123.com","z1.cnzz.com","s13.cnzz.com","xg.huataisangao.cn","z7.cnzz.com","xg.huataisangao.cn","z2.cnzz.com","s96.cnzz.com","q11.cnzz.com","thy.dacedsfa.cn","xg.whsbpw.cn","s19.cnzz.com","z8.cnzz.com","s4.cnzz.com","f5w.as12df.top","ae01.alicdn.com","www.92424.cn","k.wudejia.com","vivovip.mmszxc.top","qiu.xixiqiu.com","cdnjs.hnfenxun.com","cms.qdwght.com","api.htpan.net"]
-}
+ "ads":["mimg.0c1q0l.cn","www.googletagmanager.com","www.google-analytics.com","mc.usihnbcq.cn","mg.g1mm3d.cn","mscs.svaeuzh.cn","cnzz.hhttm.top","tp.vinuxhome.com","cnzz.mmstat.com","www.baihuillq.com","s23.cnzz.com","z3.cnzz.com","c.cnzz.com","stj.v1vo.top","z12.cnzz.com","img.mosflower.cn","tips.gamevvip.com","ehwe.yhdtns.com","xdn.cqqc3.com","www.jixunkyy.cn","sp.chemacid.cn","hm.baidu.com","s9.cnzz.com","z6.cnzz.com","um.cavuc.com","mav.mavuz.com","wofwk.aoidf3.com","z5.cnzz.com","xc.hubeijieshikj.cn","tj.tianwenhu.com","xg.gars57.cn","k.jinxiuzhilv.com","cdn.bootcss.com","ppl.xunzhuo123.com","xomk.jiangjunmh.top","img.xunzhuo123.com","z1.cnzz.com","s13.cnzz.com","xg.huataisangao.cn","z7.cnzz.com","xg.huataisangao.cn","z2.cnzz.com","s96.cnzz.com","q11.cnzz.com","thy.dacedsfa.cn","xg.whsbpw.cn","s19.cnzz.com","z8.cnzz.com","s4.cnzz.com","f5w.as12df.top","ae01.alicdn.com","www.92424.cn","k.wudejia.com","vivovip.mmszxc.top","qiu.xixiqiu.com","cdnjs.hnfenxun.com","cms.qdwght.com","api.htpan.net"
+]}
