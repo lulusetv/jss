@@ -14,7 +14,7 @@
 		"name": "最色😍TV",
 		"type": 0,
 		"api": "https://api.zuiseapi.com/api.php/provide/vod/at/xml/",
-		"playerType": 1,
+		"playUrl": " ",
 		"categories": [
 "极品学妹",
 "网曝黑料",
@@ -44,7 +44,7 @@
 		"name": "🔥GAY福利TV",
 		"type": 0,
 		"api": "https://gayapi.com/api.php/provide/vod/from/gaym3u8/at/xml",
-		"playerType": 1,
+		"playUrl": " ",
 		"categories": [
 "网曝黑料",
 "欧美无码",
@@ -217,7 +217,7 @@
     },
         {"name":"磁力广告","hosts":["magnet"],"regex":["更多","社 區","x u u","最 新","更 新","社 区","有趣","有 趣","英皇体育","全中文AV在线","澳门皇冠赌场","哥哥快来","美女荷官","裸聊","新片首发","UUE29"]}
     ],
-    "阿里":[
+    "exo":[
         {
 "group":"软解码",
 "options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},
