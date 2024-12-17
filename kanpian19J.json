@@ -39,7 +39,36 @@
 "欧美精品",
 "国产视频"]
 	},
-	
+	{
+"key": "GAY福利TV",
+		"name": "🔥GAY福利TV",
+		"type": 0,
+		"api": "https://gayapi.com/api.php/provide/vod/from/gaym3u8/at/json",
+		"playUrl": " ",
+		"categories": [
+"网曝黑料",
+"欧美无码",
+"海外主播",
+"国产视频",
+"明星换脸",
+"萝莉少女",
+"网红主播",
+"探花约炮",
+"传媒拍摄",
+"伦理三级",
+"男同gay友",
+"女同性爱",
+"重口猎奇",
+"人兽大战",
+"人妖系列",
+"SM调教",
+"日本无码",
+"中文有码",
+"黑人无码",
+"激情动漫",
+"VR视角",
+]
+	},
 {
 		"key": "push_agent",
 		"name": "推送",
@@ -67,7 +96,7 @@
 		"type": 1,
 		"url": "https://zy.qiaoji8.com/neibu.php?url=",
 		"ext": {
-			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905"],
+			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905","dplayer","gaym3u8"],
 			"header": {
 				"User-Agent": "okhttp/4.9.1"
 			}
