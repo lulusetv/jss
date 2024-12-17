@@ -14,7 +14,7 @@
 		"name": "最色😍TV",
 		"type": 0,
 		"api": "https://api.zuiseapi.com/api.php/provide/vod/at/xml/",
-		"playerType": 2,
+		"playerType": 0,
 		"categories": [
 "极品学妹",
 "网曝黑料",
@@ -44,7 +44,7 @@
 		"name": "🔥GAY福利TV",
 		"type": 0,
 		"api": "https://gayapi.com/api.php/provide/vod/from/gaym3u8/at/xml",
-		"playerType": 2,
+		"playerType": 0,
 		"categories": [
 "网曝黑料",
 "欧美无码",
@@ -115,7 +115,7 @@
   }  
 ],
 	"flags": ["youku", "qq", "QQ", "iqiyi", "qiyi", "letv", "sohu", "pptv", "PPTV", "mgtv", "wasu", "bilibili", "m1905", "seven", "m78"],
-	"exo": [{
+	"aliplayer": [{
 		"group": "软解码",
 		"options": [{
 			"category": 4,
