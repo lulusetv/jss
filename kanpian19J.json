@@ -111,7 +111,7 @@
 		}
 	}],
 	"flags": ["youku", "qq", "QQ", "iqiyi", "qiyi", "letv", "sohu", "pptv", "PPTV", "mgtv", "wasu", "bilibili", "m1905", "seven", "m78","ytm3u8","gaym3u8","dplayer","lajiao","jpm3u8","bwm3u8"],
-	"exo": [{
+	"ljk": [{
 		"group": "软解码",
 		"options": [{
 			"category": 4,
