@@ -42,7 +42,7 @@
 {
 "key": "玉兔福利TV",
 		"name": "🐇玉兔福利TV",
-		"type": 1,
+		"type": 0,
 "playerType": 1,
 		"api": "https://apiyutu.com/api.php/providedao/vod/at/xml",
 		"categories": [
