@@ -13,7 +13,6 @@
 "key": "最色TV",
 		"name": "最色😍TV",
 		"type": 0,
-"playerType": 1,
 		"api": "https://api.zuiseapi.com/api.php/provide/vod/at/xml/",
 		"categories": ["极品学妹","网曝黑料","热门事件","日本有码","日韩无码","中文字幕",
 "日韩精品","约炮探花","制服诱惑","强奸乱伦!","偷拍自拍","3P合辑","巨乳系列","口交视频","SM重味","教师学生","91大神","国产主播","日本有码","野战车震","欧美精品","国产视频"
@@ -22,7 +21,6 @@
 "key": "GAY福利TV",
 		"name": "🔥GAY福利TV",
 		"type": 0,
-"playerType": 1,
 		"api": "https://gayapi.com/api.php/provide/vod/from/gaym3u8/at/xml",
 		"categories": [
 "网曝黑料","欧美无码","海外主播","国产视频","明星换脸","萝莉少女","网红主播","探花约炮","传媒拍摄","伦理三级","男同gay友","女同性爱","重口猎奇","人兽大战","人妖系列","SM调教","日本无码","中文有码","黑人无码","激情动漫","VR视角"
@@ -32,59 +30,44 @@
 "key": "精品福利TV",
 		"name": "✨精品福利TV",
 		"type": 0,
-"playerType": 1,
 		"api": "https://jipinzyapi.com/api.php/provide/vod/at/xml",
 		"categories": [
 "国产精品","主播大秀","制服丝袜","自拍偷拍","传媒合集","AV解说","清纯学生","强奸乱伦","精品短视频","91探花","网爆门事件","明星爆料","角色扮演","VR视角","重口猎奇","少妇人妻","动漫精品","日本有码","日本无码","三级伦理","女同性恋","男同性恋","黑人专区","欧美精品","国产巨作区","稀有国产区","日韩欧美区"
-]
-	},
+]},
 
 {
 "key": "白玩福利TV",
 		"name": "💰白玩福利TV",
 		"type": 0,
-"playerType": 1,
+"playUrl": " http://bo.baiwanapi.com/?url=",
 		"api": "https://api.bwzym3u8.com/api.php/provide/vod/at/xml/",
 		"categories": ["国产视频","国产主播","91大神","热门事件","传媒自拍","日本有码","日本无码","日韩主播","动漫肉番","女同性恋"
-]
-	},
+]},
 {
 "key": "辣椒福利TV",
 		"name": "🌶️辣椒福利TV",
 		"type": 0,
-"playerType": 1,
 		"api": "http://api.11bat.com/api.php/provide/vod/at/xml/",
 		"categories": [
 "国产自拍","欧美极品","日韩无码","AV明星","中文字幕","动漫精品","极骚萝莉","人妖视频","重咸口味","三级自慰","强奸乱伦","独家擂台格斗","辣椒GIGA","HEYZO","独家DMM","HEY诱惑","童颜巨乳","高潮喷吹","激情口交","绝美少女","首次亮相","柚木TINA","原纱央莉","大桥未久","AV明星1","仁科百华","天海翼","小川阿佐美","三上悠亚","长泽梓"
-]
-	},
+]},
 {
 "key": "玉兔福利TV",
 		"name": "🐇玉兔福利TV",
 		"type": 0,
-"playerType": 1,
 		"api": "https://apiyutu.com/api.php/provide/vod/at/xml",
 		"categories": ["国产SM","网曝系列","国产人妻","精品推荐","国产精品","主播秀色","日本有码","日本无码","中文字幕","童颜巨乳","性感人妻","强奸乱伦","欧美情色","三级伦理","卡通动漫","丝袜OL","自拍偷拍","日本片商","剧情介绍","网曝系列","麻豆传媒","明星换脸","国产乱伦","国产丝袜","国产SM","国产人妻","探花嫖娼","同性恋"]
-	},
-{
-		"key": "push_agent",
-		"name": "推送",
-		"type": 3,
-		"api": "csp_PushAgent",
-		"searchable": 0,
-		"quickSearch": 0,
-		"filterable": 0,
-		"ext": "6666666666666666"
 	}
+
 ],
 
 "parses": [
 //{"name": "解析聚合","type": 3,"url": "Demo"},
 	//{"name": "Json轮询","type": 2,	"url": "Sequence"},
-{"name": "智能播放","type": 1,	"url": "web"},
+//{"name": "智能播放","type": 1,	"url": "web"},
 	{
 		"name": "极速播放",
-		"type": 1,
+		"type": 0,
 		"url": "https://zy.qiaoji8.com/neibu.php?url=",
 		"ext": {
 			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905"],
@@ -92,7 +75,7 @@
 				"User-Agent": "okhttp/4.9.1"}}},
 	{
 		"name": "极速播放二",
-		"type": 1,
+		"type": 0,
 		"url": "https://zy.qiaoji8.com/gouzi.php?url=",
 		"ext": {
 			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905", "NetFilx"],
@@ -100,7 +83,7 @@
 				"User-Agent": "okhttp/4.9.1"	}}},
 {
 		"name": "专属播放器",
-		"type": 1,
+		"type": 0,
 		"url": "http://bo.baiwanapi.com/?url=",
 		"ext": {
 			"flag": ["ytm3u8","gaym3u8","dplayer","lajiao","jpm3u8","bwm3u8"
