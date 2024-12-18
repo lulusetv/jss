@@ -44,7 +44,7 @@
 		"name": "💰白玩福利TV",
 		"type": 0,
 "playerType": 1,
-		"api": "https://api.bwzym3u8.com/api.php/provide/vod/at/xml/",
+		"api": "https://api.bwzym3u8.com/api.php/provide/vod/at/json/",
 		"categories": ["国产视频","国产主播","91大神","热门事件","传媒自拍","日本有码","日本无码","日韩主播","动漫肉番","女同性恋",
 ]
 	},
@@ -87,7 +87,7 @@
 		"type": 1,
 		"url": "https://zy.qiaoji8.com/neibu.php?url=",
 		"ext": {
-			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905","ytm3u8","gaym3u8","dplayer","lajiao","jpm3u8"],
+			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905"],
 			"header": {
 				"User-Agent": "okhttp/4.9.1"}}},
 	{
@@ -95,7 +95,7 @@
 		"type": 1,
 		"url": "https://zy.qiaoji8.com/gouzi.php?url=",
 		"ext": {
-			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905", "NetFilx","ytm3u8","gaym3u8","dplayer","lajiao","jpm3u8"],
+			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905", "NetFilx"],
 			"header": {
 				"User-Agent": "okhttp/4.9.1"	}}},
 {
@@ -103,12 +103,12 @@
 		"type": 1,
 		"url": "http://bo.baiwanapi.com/?url=",
 		"ext": {
-			"flag": ["bwm3u8"
+			"flag": ["ytm3u8","gaym3u8","dplayer","lajiao","jpm3u8","bwm3u8""
 ],
 			"header": {
 				"User-Agent": "okhttp/4.9.1"}}}
 ],
-	"flags": ["youku", "qq", "QQ", "iqiyi", "qiyi", "letv", "sohu", "pptv", "PPTV", "mgtv", "wasu", "bilibili", "m1905", "seven", "m78","ytm3u8","gaym3u8","dplayer","lajiao","jpm3u8"],
+	"flags": ["youku", "qq", "QQ", "iqiyi", "qiyi", "letv", "sohu", "pptv", "PPTV", "mgtv", "wasu", "bilibili", "m1905", "seven", "m78"],
 	"ljk": [{
 		"group": "软解码",
 		"options": [{
