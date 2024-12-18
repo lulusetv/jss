@@ -103,7 +103,7 @@
 		"type": 1,
 		"url": "http://bo.baiwanapi.com/?url=",
 		"ext": {
-			"flag": ["ytm3u8","gaym3u8","dplayer","lajiao","jpm3u8","bwm3u8""
+			"flag": ["ytm3u8","gaym3u8","dplayer","lajiao","jpm3u8","bwm3u8"
 ],
 			"header": {
 				"User-Agent": "okhttp/4.9.1"}}}
