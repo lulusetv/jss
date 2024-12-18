@@ -78,22 +78,16 @@
 	}
 ],
 
-"parses": [{
-		"name": "解析聚合",
-		"type": 3,
-		"url": "Demo"
-	},
-	{
-		"name": "Json轮询",
-		"type": 2,
-		"url": "Sequence"
-	},
+"parses": [
+//{"name": "解析聚合","type": 3,"url": "Demo"},
+	//{"name": "Json轮询","type": 2,	"url": "Sequence"},
+{"name": "智能播放","type": 1,	"url": "web"},
 	{
 		"name": "极速播放",
 		"type": 1,
 		"url": "https://zy.qiaoji8.com/neibu.php?url=",
 		"ext": {
-			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905"],
+			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905","ytm3u8","gaym3u8","dplayer","lajiao","jpm3u8","bwm3u8"],
 			"header": {
 				"User-Agent": "okhttp/4.9.1"
 			}
@@ -104,7 +98,7 @@
 		"type": 1,
 		"url": "https://zy.qiaoji8.com/gouzi.php?url=",
 		"ext": {
-			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905", "NetFilx"],
+			"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "tnmb", "seven", "bilibili", "1905", "NetFilx","ytm3u8","gaym3u8","dplayer","lajiao","jpm3u8","bwm3u8"],
 			"header": {
 				"User-Agent": "okhttp/4.9.1"
 			}
