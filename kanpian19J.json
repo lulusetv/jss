@@ -44,7 +44,7 @@
 		"name": "💰白玩福利TV",
 		"type": 0,
 "playerType": 1,
-		"api": "https://api.bwzym3u8.com/api.php/provide/vod/at/json/",
+		"api": "https://api.bwzym3u8.com/api.php/provide/vod/bwm3u8/at/xml/",
 		"categories": ["国产视频","国产主播","91大神","热门事件","传媒自拍","日本有码","日本无码","日韩主播","动漫肉番","女同性恋",
 ]
 	},
