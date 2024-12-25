@@ -13,7 +13,7 @@
 "key": "最色TV",
 		"name": "最色😍TV",
 		"type": 0,
-			"playerType":1,
+			
 		"api": "https://api.zuiseapi.com/api.php/provide/vod/at/xml/",
 		"categories": ["极品学妹","网曝黑料","热门事件","日本有码","日韩无码","中文字幕",
 "日韩精品","约炮探花","制服诱惑","强奸乱伦!","偷拍自拍","3P合辑","巨乳系列","口交视频","SM重味","教师学生","91大神","国产主播","日本有码","野战车震","欧美精品","国产视频"
@@ -22,7 +22,7 @@
 "key": "GAY福利TV",
 		"name": "🔥GAY福利TV",
 		"type": 0,
-		"playerType":1,
+		
 		"api": "https://gayapi.com/api.php/provide/vod/from/gaym3u8/at/xml",
 		"categories": [
 "网曝黑料","欧美无码","海外主播","国产视频","明星换脸","萝莉少女","网红主播","探花约炮","传媒拍摄","伦理三级","男同gay友","女同性爱","重口猎奇","人兽大战","人妖系列","SM调教","日本无码","中文有码","黑人无码","激情动漫","VR视角"
@@ -32,7 +32,7 @@
 "key": "精品福利TV",
 		"name": "✨精品福利TV‖广告勿信",
 		"type": 0,
-	"playerType":1,
+	
 		"api": "https://jipinzyapi.com/api.php/provide/vod/at/xml",
 		"categories": [
 "国产精品","主播大秀","制服丝袜","自拍偷拍","传媒合集","AV解说","清纯学生","强奸乱伦","精品短视频","91探花","网爆门事件","明星爆料","角色扮演","VR视角","重口猎奇","少妇人妻","动漫精品","日本有码","日本无码","三级伦理","女同性恋","男同性恋","黑人专区","欧美精品","国产巨作区","稀有国产区","日韩欧美区"
@@ -44,7 +44,7 @@
 "key": "辣椒福利TV",
 		"name": "🌶️辣椒福利TV‖广告勿信",
 		"type": 0,
-	"playerType":1,
+	
 		"api": "http://api.11bat.com/api.php/provide/vod/at/xml/",
 		"categories": [
 "国产自拍","欧美极品","日韩无码","AV明星","中文字幕","动漫精品","极骚萝莉","人妖视频","重咸口味","三级自慰","强奸乱伦","独家擂台格斗","辣椒GIGA","HEYZO","独家DMM","HEY诱惑","童颜巨乳","高潮喷吹","激情口交","绝美少女","首次亮相","柚木TINA","原纱央莉","大桥未久","AV明星1","仁科百华","天海翼","小川阿佐美","三上悠亚","长泽梓"
@@ -53,7 +53,7 @@
 "key": "玉兔福利TV",
 		"name": "🐇玉兔福利TV‖广告勿信",
 		"type": 0,
-	"playerType":1,
+	
 		"api": "https://apiyutu.com/api.php/provide/vod/at/xml",
 		"categories": ["国产SM","网曝系列","国产人妻","精品推荐","国产精品","主播秀色","日本有码","日本无码","中文字幕","童颜巨乳","性感人妻","强奸乱伦","欧美情色","三级伦理","卡通动漫","丝袜OL","自拍偷拍","日本片商","剧情介绍","网曝系列","麻豆传媒","明星换脸","国产乱伦","国产丝袜","国产SM","国产人妻","探花嫖娼","同性恋"]
 	}
@@ -64,7 +64,7 @@
         //{"name":"Json并发","type":2,"url":"Parallel"},
         //{"name":"Json轮询","type":2,"url":"Sequence"},
         //{"name":"解析聚合","type":3,"url":"Demo"},
-        {"name":"Web聚合","type":3,"url":"Web"},
+        {"name":"Web聚合","type":0,"url":"Web"},
         {"name":"-极速播放7-","type":0,"url":"https://jx.xyflv.cc/?url=","ext":{"header":{"user-agent":"Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36","referer":"https://www.xyflv.cc/"}}},
         {"name":"-极速播放8-","type":0,"url":"https://jx.xmflv.com/?url=","ext":{"header":{"user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57"}}},
         {"name":"-极速播放9-","type":0,"url":"https://jx.zhanlangbu.com/?url=","ext":{"flag":["qq","腾讯","qiyi","爱奇艺","奇艺","youku","优酷","mgtv","芒果","letv","乐视","pptv","PPTV","sohu","bilibili","哔哩哔哩","哔哩"],"ext":{"header":{"user-agent":"Mozilla/5.0 (Linux; Android 13; V2049A Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/116.0.0.0 Mobile Safari/537.36"}}}},
